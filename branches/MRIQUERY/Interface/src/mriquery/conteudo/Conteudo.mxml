@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:TabNavigator xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%" styleName="menuPrincipal" buttonMode="true"
+				 useHandCursor="true" borderThickness="0" borderStyle="none" xmlns:itemRenderer="mriquery.componentes.itemRenderer.*"
+				 xmlns:componentes="mriquery.componentes.*" xmlns:Clientes="mriquery.conteudo.Clientes.*" xmlns:Clientes1="mriquery.conteudo.Clientes.*" xmlns:layout="mriquery.layout.*" xmlns:Produto="mriquery.conteudo.Produto.*" xmlns:editora="mriquery.conteudo.editora.*" xmlns:funcionario="mriquery.conteudo.funcionario.*">
+	
+	<mx:Style source="assets/css/Default.css"/>
+	<mx:Script>
+		<![CDATA[
+			import mx.managers.PopUpManager;
+			import mriquery.conteudo.WindowCadastrar;
+			
+			import mriquery.Util.Icones;
+			
+			private function cadastrarCliente():void {
+				
+				var windowCadastrarCliente:WindowCadastrar = new WindowCadastrar();
+				PopUpManager.addPopUp(windowCadastrarCliente,this,true);
+				windowCadastrarCliente.tituloCadastra("Cadastrar Novo Cliente");
+				PopUpManager.centerPopUp(windowCadastrarCliente);
+			}
+			
+			
+		]]>
+	</mx:Script>	
+		<mx:VBox id="hbPaginaInicial" label="Pagina Inicial" width="100%" height="100%" >
+			<mx:HBox   horizontalAlign="left" verticalAlign="middle" width="100%" height="100"
+			 	 verticalGap="0"   verticalScrollPolicy="off" borderStyle="solid" borderColor="#E9E9E9" cornerRadius="1" creationPolicy="all"
+			 	 backgroundImage="{Icones.imgFundoMenu}" backgroundSize="100%" >
+			 </mx:HBox> 
+		</mx:VBox>
+		
+		<mx:VBox id="hbGerenciarClientes" label="Clientes" width="100%" height="100%"  verticalScrollPolicy="on">
+			<mx:HBox   horizontalAlign="left" verticalAlign="middle" width="100%" height="80"
+			 	 	   verticalGap="0"   verticalScrollPolicy="off" borderStyle="solid" borderColor="#E9E9E9" cornerRadius="1" creationPolicy="all"
+			 		   backgroundImage="{Icones.imgFundoMenu}" backgroundSize="100%" >
+			 	<mx:HBox width="10%" height="100%">
+			 		<mx:Image source="{Icones.img_adicionarUsuario}" useHandCursor="true" buttonMode="true" 
+			 				  toolTip="Adicionar novo Cliente" click="cadastrarCliente()"/>
+			 	</mx:HBox>
+			 </mx:HBox>
+			 <mx:HBox width="100%" height="95%" horizontalAlign="center">
+			 	<layout:PanelContexto width="90%" height="100%" title="Gerenciar Clientes"  cornerRadius="0"
+								      layout="vertical" horizontalAlign="center">
+			 		<mx:TitleWindow width="80%" height="45%" title="Buscar Clientes" borderStyle="solid" horizontalAlign="center">
+			 			<Clientes:BuscarCliente width="100%" height="100%"/>
+			 		</mx:TitleWindow>
+			 		<mx:Spacer height="5"/>
+			 		<Clientes:DgCliente width="100%" height="50%"/>
+			 	</layout:PanelContexto>
+			 </mx:HBox>
+		</mx:VBox>
+		
+		
+		<mx:VBox id="hbGerenciarProduto" label="Produtos" width="100%" height="100%"  verticalScrollPolicy="on">
+			<mx:HBox   horizontalAlign="left" verticalAlign="middle" width="100%" height="80"
+			 	 	   verticalGap="0"   verticalScrollPolicy="off" borderStyle="solid" borderColor="#E9E9E9" cornerRadius="1" creationPolicy="all"
+			 		   backgroundImage="{Icones.imgFundoMenu}" backgroundSize="100%" >
+			 	<mx:HBox width="10%" height="100%">
+			 		<mx:Canvas width="100%" height="100%">
+			 			<mx:Image source="{Icones.img_adicionarProduto}" useHandCursor="true" buttonMode="true"
+			 				  toolTip="Adicionar novo Produto" click="cadastrarCliente()" x="24" y="21"/>
+			 		</mx:Canvas>
+			 	</mx:HBox>
+			 </mx:HBox>
+			 <mx:HBox width="100%" height="95%" horizontalAlign="center">
+			 	<layout:PanelContexto width="90%" height="100%" title="Gerenciar Produtos"  cornerRadius="0"
+								      layout="vertical" horizontalAlign="center">
+			 		<mx:TileList width="100%" height="100%" maxColumns="13" >
+			 			<mx:Object/>
+						<mx:Object/>
+						<mx:Object/>
+						<mx:Object/>
+						<mx:Object/>
+						<mx:Object/>
+						<mx:Object/>
+						<mx:Object/>
+						<mx:Object/>
+						<mx:Object/>
+						<mx:Object/>
+						<mx:Object/>
+						<mx:Object/>
+						<mx:Object/>
+			 		</mx:TileList>
+			 	</layout:PanelContexto>
+			 </mx:HBox>
+		</mx:VBox>
+		<mx:VBox id="hbGerenciarEditora" label="Editoras" width="100%" height="100%"  verticalScrollPolicy="on">
+			<mx:HBox   horizontalAlign="left" verticalAlign="middle" width="100%" height="80"
+			 	 	   verticalGap="0"   verticalScrollPolicy="off" borderStyle="solid" borderColor="#E9E9E9" cornerRadius="1" creationPolicy="all"
+			 		   backgroundImage="{Icones.imgFundoMenu}" backgroundSize="100%" >
+			 	<mx:HBox width="10%" height="100%">
+			 		<mx:Canvas width="100%" height="100%">
+			 			<mx:Image source="{Icones.img_adicionarEditora}" useHandCursor="true" buttonMode="true"
+			 				  toolTip="Adicionar novo Produto" click="cadastrarCliente()" x="24" y="21"/>
+			 		</mx:Canvas>
+			 	</mx:HBox>
+			 </mx:HBox>
+			 <mx:HBox width="100%" height="95%" horizontalAlign="center">
+			 	<layout:PanelContexto width="90%" height="100%" title="Gerenciar Editoras"  cornerRadius="0"
+								      layout="vertical" horizontalAlign="center">
+			 		<mx:TitleWindow width="80%" height="45%" title="Buscar Editora" borderStyle="solid" horizontalAlign="center">
+			 			<editora:BuscarEditora width="100%" height="100%"/>
+			 		</mx:TitleWindow>
+			 		<mx:Spacer height="5"/>
+			 		<editora:DgEditora width="100%" height="50%"/>
+			 	</layout:PanelContexto>
+			 </mx:HBox>
+		</mx:VBox>
+		<mx:VBox id="hbGerenciarFuncionario" label="Funcionarios" width="100%" height="100%"  verticalScrollPolicy="on">
+			<mx:HBox   horizontalAlign="left" verticalAlign="middle" width="100%" height="80"
+			 	 	   verticalGap="0"   verticalScrollPolicy="off" borderStyle="solid" borderColor="#E9E9E9" cornerRadius="1" creationPolicy="all"
+			 		   backgroundImage="{Icones.imgFundoMenu}" backgroundSize="100%" >
+			 	<mx:HBox width="10%" height="100%">
+			 		<mx:Image source="{Icones.img_adicionarUsuario}" useHandCursor="true" buttonMode="true" 
+			 				  toolTip="Adicionar novo Cliente" click="cadastrarCliente()"/>
+			 	</mx:HBox>
+			 </mx:HBox>
+			 <mx:HBox width="100%" height="95%" horizontalAlign="center">
+			 	<layout:PanelContexto width="90%" height="100%" title="Gerenciar Funcionario"  cornerRadius="0"
+								      layout="vertical" horizontalAlign="center">
+			 		<mx:TitleWindow width="80%" height="45%" title="Buscar Funcionario" borderStyle="solid" horizontalAlign="center">
+			 			<funcionario:BuscarFuncionario width="100%" height="100%"/>
+			 		</mx:TitleWindow>
+			 		<mx:Spacer height="5"/>
+			 		<funcionario:DgFuncionario width="100%" height="50%"/>
+			 	</layout:PanelContexto>
+			 </mx:HBox>
+		</mx:VBox>
+</mx:TabNavigator>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:HBox 	xmlns:mx="http://www.adobe.com/2006/mxml" 
+			horizontalScrollPolicy="off"
+			verticalScrollPolicy="off"
+			horizontalAlign="center" 
+			useHandCursor="true"
+			buttonMode="true">
+		
+		<mx:Script>
+			<![CDATA[
+				import mx.controls.Alert;
+				import mriquery.Util.Icones;
+			]]>
+		</mx:Script>
+        <mx:Button  icon="{Icones.img_editar}" skin="{null}"/>
+</mx:HBox>

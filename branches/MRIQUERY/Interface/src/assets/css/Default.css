@@ -1,0 +1,63 @@
+/* CSS file */
+TabNavigator.menuPrincipal {
+   tabWidth: 110;
+   tab-height:25;
+   horizontalGap: 0;
+   textIndent: 0;
+   tab-offset:0;
+   backgroundAlpha: 1.0;
+   backgroundColor: #FFFFFF;
+   borderStyle: solid;
+   borderColor: #FFFFFF;
+   tabStyleName: "myTabs";
+   firstTabStyleName: "myTabs";
+   lastTabStyleName: "myTabs";
+   selectedTabTextStyleName: "mySelectedTabs";
+   backgroundSize: "100%";
+   paddingTop: 0;
+   fontFamily: Arial;
+   fontSize: 11;
+   bolor: #FFFFFF;
+   text-selected-color:#FFFFFF;
+}
+.myTabs {
+   cornerRadius: 7;
+   highlightAlphas: 0, 0;
+   letterSpacing: 0;
+   fillAlphas: 1.0, 1.0, 1.0, 1.0;
+   fillColors: #173772, #6789C7, #173772, #6789C7;
+   backgroundAlpha: 1.0;
+   backgroundColor: #E18400;
+   borderColor: #DFDFDF;
+   borderThickness: 0;
+   color: #FFFFFF;
+   textRollOverColor: #FFFFFF;
+   themeColor: #F9A20B;
+   fontFamily: Arial;
+   fontSize: 12;
+   fontWeight: normal;
+   firstTabStyleName: tabNavigatorFirstTab;
+   lastTabStyleName: tabNavigatorLastTab;
+   tabStyleName: tabNavigatorTab;
+   borderStyle: inset;
+   horizontalGap: 0;
+   textSelectedColor: #FFFFFF;
+   selectedTabTextStyleName: tabNavigatorSelectedTabText;
+
+}
+
+Label.lblRotulos{
+	fontSize: 10;
+	color: #000000;
+}
+
+Panel.panelContexto{
+	border-color: #062377;
+	titleStyleName: panelTitle;
+}
+.panelTitle
+{
+	color: #FFFFFF;
+	fontFamily: Verdana;
+	fontSize: 12;
+}

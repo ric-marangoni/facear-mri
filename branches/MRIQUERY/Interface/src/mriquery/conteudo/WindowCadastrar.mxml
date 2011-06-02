@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:TitleWindow xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" width="600" height="650" showCloseButton="true" close="closePoup()"  styleName="panelContexto" xmlns:date="com.mriquery.componentes.date.*" xmlns:date1="mriquery.componentes.date.*" xmlns:mascaras="mriquery.componentes.mascaras.*">
+	<mx:Script>
+		<![CDATA[
+		
+			import mx.managers.PopUpManager;
+			
+			[Bindable]
+			var titulo:String;
+			
+			public function tituloCadastra(titulo:String):void {
+				
+				this.title = titulo;
+			}
+			
+			private function closePoup():void {
+				
+				PopUpManager.removePopUp(this);
+			}
+		]]>
+	</mx:Script>
+</mx:TitleWindow>
