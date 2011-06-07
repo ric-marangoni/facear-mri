@@ -17,6 +17,7 @@ package mriquery.componentes.date
 			yearNavigationEnabled = true;
 			formatString = 'DD/MM/YYYY';
 			ptFormatter.formatString = 'DD/MM/YYYY';
+			restrict="0-9./\-";
 
 		}
 		

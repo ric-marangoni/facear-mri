@@ -9,6 +9,11 @@
 			import mx.controls.Alert;
 			import mriquery.Util.Icones;
 			
+			private function init():void {
+				
+				txtUsuario.setFocus();
+			}
+			
 			private function logar():void {
 				
 				if (txtUsuario.text != '' && txtSenha.text != '' && txtUsuario.text == 'admin' && txtSenha.text == 'admin') {

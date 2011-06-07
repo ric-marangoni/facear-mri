@@ -6,17 +6,39 @@
 	<mx:Style source="assets/css/Default.css"/>
 	<mx:Script>
 		<![CDATA[
+			import mriquery.conteudo.funcionario.WindowCadastrarFuncionario;
+			import mriquery.conteudo.editora.WindowCadastrarEditora;
+			import mriquery.conteudo.Clientes.WindowCadastrarCliente;
 			import mx.managers.PopUpManager;
-			import mriquery.conteudo.WindowCadastrar;
+			import mriquery.conteudo.Clientes.WindowCadastrarCliente;
 			
 			import mriquery.Util.Icones;
 			
 			private function cadastrarCliente():void {
 				
-				var windowCadastrarCliente:WindowCadastrar = new WindowCadastrar();
+				var windowCadastrarCliente:WindowCadastrarCliente = new WindowCadastrarCliente();
 				PopUpManager.addPopUp(windowCadastrarCliente,this,true);
+				windowCadastrarCliente.y = 500;
 				windowCadastrarCliente.tituloCadastra("Cadastrar Novo Cliente");
 				PopUpManager.centerPopUp(windowCadastrarCliente);
+			}
+			
+			private function cadastrarEditora():void {
+				
+				var windowCadastrarEditora:WindowCadastrarEditora = new WindowCadastrarEditora();
+				PopUpManager.addPopUp(windowCadastrarEditora,this,true);
+				windowCadastrarEditora.y = 500;
+				windowCadastrarEditora.tituloCadastra("Cadastrar Nova Editora");
+				PopUpManager.centerPopUp(windowCadastrarEditora);
+			}
+			
+			private function cadastrarFuncionario():void {
+				
+				var windowCadastrarFuncionario:WindowCadastrarFuncionario = new WindowCadastrarFuncionario();
+				PopUpManager.addPopUp(windowCadastrarFuncionario,this,true);
+				windowCadastrarFuncionario.y = 500;
+				windowCadastrarFuncionario.tituloCadastra("Cadastrar Novo Funcionario");
+				PopUpManager.centerPopUp(windowCadastrarFuncionario);
 			}
 			
 			
@@ -55,12 +77,6 @@
 			<mx:HBox   horizontalAlign="left" verticalAlign="middle" width="100%" height="80"
 			 	 	   verticalGap="0"   verticalScrollPolicy="off" borderStyle="solid" borderColor="#E9E9E9" cornerRadius="1" creationPolicy="all"
 			 		   backgroundImage="{Icones.imgFundoMenu}" backgroundSize="100%" >
-			 	<mx:HBox width="10%" height="100%">
-			 		<mx:Canvas width="100%" height="100%">
-			 			<mx:Image source="{Icones.img_adicionarProduto}" useHandCursor="true" buttonMode="true"
-			 				  toolTip="Adicionar novo Produto" click="cadastrarCliente()" x="24" y="21"/>
-			 		</mx:Canvas>
-			 	</mx:HBox>
 			 </mx:HBox>
 			 <mx:HBox width="100%" height="95%" horizontalAlign="center">
 			 	<layout:PanelContexto width="90%" height="100%" title="Gerenciar Produtos"  cornerRadius="0"
@@ -91,7 +107,7 @@
 			 	<mx:HBox width="10%" height="100%">
 			 		<mx:Canvas width="100%" height="100%">
 			 			<mx:Image source="{Icones.img_adicionarEditora}" useHandCursor="true" buttonMode="true"
-			 				  toolTip="Adicionar novo Produto" click="cadastrarCliente()" x="24" y="21"/>
+			 				  toolTip="Adicionar nova Editora" click="cadastrarEditora()" x="24" y="21"/>
 			 		</mx:Canvas>
 			 	</mx:HBox>
 			 </mx:HBox>
@@ -112,7 +128,7 @@
 			 		   backgroundImage="{Icones.imgFundoMenu}" backgroundSize="100%" >
 			 	<mx:HBox width="10%" height="100%">
 			 		<mx:Image source="{Icones.img_adicionarUsuario}" useHandCursor="true" buttonMode="true" 
-			 				  toolTip="Adicionar novo Cliente" click="cadastrarCliente()"/>
+			 				  toolTip="Adicionar novo Funcionario" click="cadastrarFuncionario()"/>
 			 	</mx:HBox>
 			 </mx:HBox>
 			 <mx:HBox width="100%" height="95%" horizontalAlign="center">

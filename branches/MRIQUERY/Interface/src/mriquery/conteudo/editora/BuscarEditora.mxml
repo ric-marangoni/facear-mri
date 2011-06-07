@@ -27,7 +27,7 @@
 		<!-- ativo -->
 		
 		<mx:Label text="Data De Cadastro :"  styleName="lblRotulos" left="0" top="88" color="#020202"/>
-		<date1:DateFieldPt id="dateCadastro" left="132" top="86"  width="132" showToday="true"/>
+		<date1:DateFieldPt id="dateCadastro" left="132" top="86"  width="132"/>
 		
 		<!-- botões  -->
 	

@@ -62,6 +62,14 @@ package mriquery.Util{
 		[Embed(source="assets/imagens/img_adicionarEditora.png")]
 		public static var img_adicionarEditora:Class;
 		
+		[Bindable]
+		[Embed(source="assets/imagens/img_adicionar.png")]
+		public static var img_adicionar:Class;
+		
+		[Bindable]
+		[Embed(source="assets/imagens/img_save.png")]
+		public static var img_save:Class;
+		
 		
 		
 		
