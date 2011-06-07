@@ -7,7 +7,9 @@
 			
 			private function init():void {
 				
+				//Evento recebido do WindowLogin
 				this.addEventListener(EventsMryQuery.LOGIN , realizarLgin );
+				//Evento recebido do WindowHeader
 				this.addEventListener(EventsMryQuery.LOGOUT , realizarLogout );
 			}
 			
