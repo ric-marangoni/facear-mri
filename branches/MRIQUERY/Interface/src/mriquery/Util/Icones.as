@@ -70,6 +70,10 @@ package mriquery.Util{
 		[Embed(source="assets/imagens/img_save.png")]
 		public static var img_save:Class;
 		
+		[Bindable]
+		[Embed(source="assets/imagens/img_buscar_cep.png")]
+		public static var img_buscar_cep:Class;
+		
 		
 		
 		

@@ -2,38 +2,67 @@
 <mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%">
 	<mx:Script >
 		<![CDATA[
+			
+			import mx.controls.Alert;
 			import mriquery.Util.Constantes;
 			import mriquery.Util.Util;
-			
-			private function siteCorreio():void {
-				Util.abrirLinkNovaJanela(Constantes.SITE_CORREIO);
-			}
+			import mriquery.Util.Icones;
+			import mx.rpc.events.ResultEvent;
+		  
+		  private function pesquisar():void{
+			  if (txtCep.length == 5 && txtCepCompl.length == 3){
+		  	  	  buscaCep.url = "http://www.buscarcep.com.br/?cep="+ txtCep.text + txtCepCompl.text+"&formato=xml&chave=1N3fNFPgcAHfeR9hwTfs7u18LBKYqB0";
+			  	  buscaCep.send();
+			  }else{
+			  	Alert.show("Preencha Corretamente o Cep","Informativo");
+			  }
+		  }
+		  private function cepResultHandler(event:ResultEvent):void{
+	          //HTTPService returns an XML Document
+	          var resultXML:XMLList = new XMLList(new XML(event.result));
+	          if (resultXML != null && resultXML.retorno.resultado > 0){
+	              this.txtEndereco.text = resultXML.retorno.tipo_logradouro + " " + resultXML.retorno.logradouro;
+	              this.txtBairro.text   = new String(resultXML.retorno.bairro);
+	              this.txtCidade.text   = new String(resultXML.retorno.cidade);
+	              this.txtUf.text 	 	= new String(resultXML.retorno.uf);
+	          } else {
+	              this.txtEndereco.text = "";
+	              this.txtBairro.text   = "";
+	              this.txtCidade.text   = "";
+	              this.txtUf.text 	 	= "";
+	              Alert.show("Cep Não Encontrado","Informativo");
+	          }
+		  }
 		]]>
 	</mx:Script>
+	<mx:HTTPService id="buscaCep" result="cepResultHandler(event)"
+        method="POST" showBusyCursor="true" resultFormat="e4x"/>
+        
 	<mx:Form width="100%" height="238" y="66">
 		<mx:FormItem label="CEP :" required="true" direction="horizontal" x="38" y="36" width="100%">
-			<mx:TextInput width="60"/>
-			<mx:TextInput width="49"/>
+			<mx:TextInput id="txtCep" maxChars="5" width="60"/>
+			<mx:TextInput id="txtCepCompl" maxChars="3" width="49"/>
+			<mx:Image source="{Icones.img_buscar_cep}" showBusyCursor="true" buttonMode="true" click="pesquisar()"/>
 			<mx:Spacer width="30%"/>
-			<mx:LinkButton label="Esqueceu Seu CEP" color="#020202" click="siteCorreio()"/>
+			<mx:LinkButton label="Esqueceu Seu CEP" color="#020202" click="{Util.siteCorreio()}"/>
 		</mx:FormItem>
 		<mx:FormItem label="Rua :" required="true" x="38" y="66" width="100%">
-			<mx:TextInput x="38" y="82" width="384"/>
+			<mx:TextInput id="txtEndereco" x="38" y="82" width="384"/>
 		</mx:FormItem>
 		<mx:FormItem label="Bairro :" required="true" x="28" y="96" width="100%">
-			<mx:TextInput x="38" y="82" width="384"/>
+			<mx:TextInput id="txtBairro" x="38" y="82" width="384"/>
 		</mx:FormItem>
 		<mx:FormItem label="Cidade :" required="true" x="18" y="126" width="100%">
-			<mx:TextInput x="38" y="82" width="384"/>
+			<mx:TextInput id="txtCidade" x="38" y="82" width="384"/>
 		</mx:FormItem>
-		<mx:FormItem label="Complemento :" required="true" x="-21" y="156" width="100%">
+		<mx:FormItem label="Complemento :" x="-21" y="156" width="100%">
 			<mx:TextInput x="38" y="82" width="384"/>
 		</mx:FormItem>
 		<mx:FormItem label="Numero :" required="true" x="-21" y="156" width="100%">
 			<mx:TextInput x="38" y="82" width="66"/>
 		</mx:FormItem>
 		<mx:FormItem label="UF :" required="true" x="38" y="186" width="100%">
-			<mx:TextInput x="38" y="82" width="66"/>
+			<mx:TextInput id="txtUf" x="38" y="82" width="66"/>
 		</mx:FormItem>
 	</mx:Form>
 </mx:Canvas>

@@ -12,6 +12,11 @@ package mriquery.Util{
 			var urlRequest:URLRequest = new URLRequest(url);
 			navigateToURL(urlRequest, "_blank");
 		}
+		
+		public static function siteCorreio():void {
+			
+			Util.abrirLinkNovaJanela(Constantes.SITE_CORREIO);
+		}
 
 	}
 }
