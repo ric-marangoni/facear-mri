@@ -14,7 +14,7 @@ public class Endereco
     private int id;
     private String estado;
     private String cidade;
-    private String rua;
+    private String logradouro;
     private long cep;
     private int numero;
     private String complemento;
@@ -35,10 +35,10 @@ public class Endereco
         set { this.cidade = value; }
         get { return cidade; }
     }
-    public String Rua
+    public String Logradouro
     {
-        set { this.rua = value; }
-        get { return rua; }
+        set { this.logradouro = value; }
+        get { return logradouro; }
     }
     public long Cep
     {

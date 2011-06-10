@@ -13,18 +13,17 @@ namespace br.com.entidades
     public class Funcionario:PessoaFisica
     {
         private int id;
-        private String perfil;
+        private Perfil perfil;
         private DateTime dataAdmissao;
         private DateTime dataDemissao;
-        private String setor;
-
+        
         public int Id 
         {
           set { this.id = value; }
           get { return id; }
         }
 
-        public String Perfil
+        public Perfil Perfil
         {
            set { this.perfil = value; }
            get { return perfil; }
@@ -38,14 +37,8 @@ namespace br.com.entidades
 
         public DateTime DataDemissao
         {
-          set { this.dataDemissao = value; }
-          get { return dataDemissao; }
-        }
-
-        public String Setor
-        {
-          set { this.setor = value; }
-          get { return setor; }
+            set { this.dataDemissao = value; }
+            get { return dataDemissao; }
         }
                 
      }

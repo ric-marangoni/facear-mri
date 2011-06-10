@@ -23,7 +23,7 @@ namespace br.com.entidades
             get { return id; }
         }
 
-        public String Perfil
+        public String Perfil_
         {
             set { this.perfil = value; }
             get { return perfil; }

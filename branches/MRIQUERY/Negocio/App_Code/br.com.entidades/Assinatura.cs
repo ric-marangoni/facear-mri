@@ -15,7 +15,6 @@ public class Assinatura
 {
     private int id;
     private Cliente cliente;
-    private Produto produto;
     private Plano plano;
     private int tipoAssinatura;
     private DateTime dataInicial;
@@ -33,19 +32,13 @@ public class Assinatura
         get { return cliente; }
     }
 
-    public Produto Produto 
-    {
-        set { this.produto = value; }
-        get { return produto; } 
-    }
-
     public Plano Plano
     {
         set { this.plano = value; }
         get { return plano; }
     }
 
-    public Plano TipoAssinatura
+    public int TipoAssinatura
     {
         set { this.tipoAssinatura = value; }
         get { return tipoAssinatura; }

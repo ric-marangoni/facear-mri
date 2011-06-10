@@ -14,7 +14,7 @@ namespace br.com.entidades
     
     public class Pessoa
     {
-        private String nome;
+        private int status;
         private DateTime dataCadastro;
         private String senha;
         private String login;
@@ -26,10 +26,10 @@ namespace br.com.entidades
         private long telefoneComercial;
 
          
-        public String Nome
+        public int Status
         {
-            set { this.nome = value; }
-            get { return nome; }
+            set { this.status = value; }
+            get { return status; }
         }
 
         public DateTime DataCadastro
@@ -52,10 +52,16 @@ namespace br.com.entidades
             set { this.endereco = value; }
             get { return endereco; }
         }
-        public String Email
+        public String EmailComercial
         {
-            set { this.email = value; }
-            get { return email; }
+            set { this.emailComercial = value; }
+            get { return emailComercial; }
+        }
+
+        public String EmailPessoal
+        {
+            set { this.emailPessoal = value; }
+            get { return emailPessoal; }
         }
         public long TelefoneResidencial
         {

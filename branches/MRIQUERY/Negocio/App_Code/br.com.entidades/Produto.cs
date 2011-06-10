@@ -53,7 +53,7 @@ namespace br.com.entidades
             get { return edicao; }
         }
 
-        public String Categoria 
+        public Categoria Categoria 
         {
             set { this.categoria = value; }
             get { return categoria; }

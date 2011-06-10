@@ -11,20 +11,30 @@ namespace br.com.entidades
 {
    public class PessoaFisica:Pessoa
    {
+       private String nome;
        private DateTime dataNascimento;
-       private String sexo;
+       private int sexo;
        private long cpf;
+
+
+       public String Nome
+       {
+           set { this.nome = value; }
+           get { return nome; }
+       }
 
        public DateTime DataNascimento
        {
            get { return dataNascimento; }
            set { dataNascimento = value; }
        }
+
        public int Sexo
        {
            set { this.sexo = value; }
            get { return sexo; }
        }
+
        public long Cpf
        {
            set { this.cpf = value; }

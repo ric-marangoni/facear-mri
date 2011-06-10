@@ -12,12 +12,12 @@ using System.Xml.Linq;
 
 namespace br.com.entidades
 {
-    public class Pagamento
+    public class FormaPagamento
     {
 
         private int id;
         private DateTime validade;
-        private String formaPagamento;
+        private String tipoPagamento;
         private long numeroCartao;
         private String bandeira;
 
@@ -26,11 +26,11 @@ namespace br.com.entidades
             get { return numeroCartao; }
             set { numeroCartao = value; }
         }
-       
-        public String FormaPagamento
+
+        public String TipoPagamento
         {
-            get { return formaPagamento; }
-            set { formaPagamento = value; }
+            get { return tipoPagamento; }
+            set { tipoPagamento = value; }
         }
 
         public int Id
@@ -39,10 +39,10 @@ namespace br.com.entidades
             set { id = value; }
         }
 
-        public long NumeroCartao
+        public DateTime Validade
         {
-            get { return numeroCartao; }
-            set { numeroCartao = value; }
+            get { return validade; }
+            set { validade = value; }
         }
 
         public String Bandeira

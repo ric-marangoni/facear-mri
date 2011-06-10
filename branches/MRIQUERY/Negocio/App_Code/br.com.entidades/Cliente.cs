@@ -13,9 +13,10 @@ namespace br.com.entidades
     public class Cliente:Pessoa
     {
         private int id;
-        private int status;
+        private Pessoa pessoa;
+        private Assinatura assinatura;
         private Endereco enderecoAlternativo;
-        private Pagamento pagamento;
+        private FormaPagamento formaPagamento;
 
         public int Id
         {
@@ -23,20 +24,27 @@ namespace br.com.entidades
             get {return id;}
         }
 
-        public Assinatura Status
+        public Assinatura Assinatura_
         {
-            set { this.status = value; }
-            get { return status; }
+            set { this.assinatura = value; }
+            get { return assinatura; }
         }
+
+        public Pessoa Pessoa
+        {
+            set { this.pessoa = value; }
+            get { return pessoa; }
+        }
+
         public Endereco EnderecoAlternativo
         {
             set { this.enderecoAlternativo = value; }
             get { return enderecoAlternativo; }
         }
-        public int TipoCliente
+        public FormaPagamento FormaPagamento
         {
-            set { this.tipoCliete = value; }
-            get { return tipoCliete; }
+            set { this.formaPagamento = value; }
+            get { return formaPagamento; }
         }
 	
 	
