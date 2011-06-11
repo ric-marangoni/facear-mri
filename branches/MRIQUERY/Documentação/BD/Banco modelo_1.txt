@@ -57,18 +57,26 @@ CREATE TABLE tb_usuario(
 );
 
 CREATE TABLE tb_forma_pagamento(
-	id_pagamento int not null auto_increment,
+	id_forma_pagamento int not null auto_increment,
 	numero_cartao long,
 	bandeira varchar(50),
 	data_validade datetime,
 	tipo_pagamento int,
-	primary key(id_pagamento)
+	primary key(id_forma_pagamento)
 );
 
 CREATE TABLE tb_categoria(
 	id_categoria int not null auto_increment,
 	categoria varchar(50),
 	primary key(id_categoria)
+);
+
+CREATE TABLE tb_plano(
+	id_plano int not null auto_increment,
+	plano varchar(100),
+	descricao varchar(200),
+	preco double,
+	primary key(id_plano)
 );
 
 CREATE TABLE tb_assinatura(
@@ -80,27 +88,9 @@ CREATE TABLE tb_assinatura(
 	data_final datetime,
 	id_forma_pagamento int,
 	primary key(id_assinatura),
-	foreing key(id_usuario) references tb_usuario(id_usuario),
-	foreing key(id_plano) references tb_plano(id_plano),
-	foreing key(id_forma_pagamento) references tb_forma_pagamento(id_forma_pagamento)
-	
-);
-
-CREATE TABLE tb_plano(
-	id_plano int not null auto_increment,
-	plano varchar(100),
-	descricao varchar(200),
-	preco double,
-	primary key(id_plano)
-);
-
-CREATE TABLE tb_plano_produto(
-	id_plano_produto int not null auto_increment,
-	id_plano int not null,
-	id_produto int not null,
-	primary key(id_plano_produto),
-	foreing key(id_plano) references tb_plano(id_plano),
-	foreing key(id_produto) references tb_produto(id_produto)
+	foreign key(id_usuario) references tb_usuario(id_usuario),
+	foreign key(id_plano) references tb_plano(id_plano),
+	foreign key(id_forma_pagamento) references tb_forma_pagamento(id_forma_pagamento)	
 );
 
 CREATE TABLE tb_produto(
@@ -115,7 +105,15 @@ CREATE TABLE tb_produto(
 	imagem blob,
 	id_editora int not null,
 	primary key(id_produto),
-	foreing key(id_categoria) references tb_categoria(id_categoria),
-	foreing key(id_editora) references tb_editora(id_editora)
+	foreign key(id_categoria) references tb_categoria(id_categoria),
+	foreign key(id_editora) references tb_editora(id_editora)
 );
 
+CREATE TABLE tb_plano_produto(
+	id_plano_produto int not null auto_increment,
+	id_plano int not null,
+	id_produto int not null,
+	primary key(id_plano_produto),
+	foreign key(id_plano) references tb_plano(id_plano),
+	foreign key(id_produto) references tb_produto(id_produto)
+);
