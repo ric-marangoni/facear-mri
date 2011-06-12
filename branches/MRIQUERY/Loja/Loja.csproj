@@ -159,6 +159,12 @@
     <None Include="imagens\revistas\Thumbs.db" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Negocio\App_Code\br.com.entidades\br.com.entidades.csproj">
+      <Project>{6AC1F742-33AD-426A-B788-EB752C520692}</Project>
+      <Name>br.com.entidades</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="imagens\jornais\.svn\prop-base\" />
     <Folder Include="imagens\jornais\.svn\props\" />
