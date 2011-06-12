@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>3d379cdb-e91c-4d23-b6c8-117080e6209d</ProjectGuid>
+    <ProjectGuid>{6AC1F742-33AD-426A-B788-EB752C520692}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>br.com.entidades</RootNamespace>
@@ -45,8 +45,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Assinatura.cs" />
+    <Compile Include="Categoria.cs" />
+    <Compile Include="Cliente.cs" />
+    <Compile Include="Editora.cs" />
+    <Compile Include="Endereco.cs" />
+    <Compile Include="Funcionario.cs" />
+    <Compile Include="Pagamento.cs" />
+    <Compile Include="Perfil.cs" />
+    <Compile Include="Pessoa.cs" />
+    <Compile Include="PessoaFisica.cs" />
+    <Compile Include="PessoaJuridica.cs" />
+    <Compile Include="Plano.cs" />
+    <Compile Include="Produto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\br.com.servicos\br.com.servicos.csproj">
+      <Project>{FC801AD1-6B31-4A51-BAB5-4DD39D8DCC50}</Project>
+      <Name>br.com.servicos</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
