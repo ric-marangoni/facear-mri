@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>054ebf30-eb89-4416-b514-6e0bd56b8884</ProjectGuid>
+    <ProjectGuid>{FC801AD1-6B31-4A51-BAB5-4DD39D8DCC50}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>br.com.servicos</RootNamespace>
@@ -47,6 +47,12 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\br.com.dao\br.com.dao.csproj">
+      <Project>{B38D9E38-48BB-4341-8688-9A7F5CBDB670}</Project>
+      <Name>br.com.dao</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
