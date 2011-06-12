@@ -1,0 +1,120 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Store.master.cs" Inherits="Loja.Store" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Loja Leia+</title>
+    <link href="App_Themes/Estilos/estilos.css" type="text/css" rel="Stylesheet" />
+    <!--[if IE 6]>
+	    <link href="css/ie6.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <script type="text/javascript" src="js/jQuery.js"></script>
+    <script type="text/javascript" src="js/jquery.cycle.js"></script>
+    <script type="text/javascript" src="js/util.js" ></script>    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="wrap">
+		<div id="topo">
+			<ul id="menu">				
+				<li><a href="#">Fale com a Leia+</a></li>
+				<li><a href="#">Trabalhe na Leia+</a></li>
+				<li><a href="#">Institucional</a></li>
+				<li><a href="#">Pos-Graduação</a></li>
+				<li><a href="#">A Leia+</a></li>
+				<li><a href="#">Home</a></li>
+			</ul>
+			<div class="clear"><!-- --></div>
+		</div>
+    
+        <div id="box-principal">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            
+            </asp:ContentPlaceHolder>
+        </div>
+        
+        <div id="side-bar">					
+			<div class="box-sidebar-bg">
+				<h2>Sou Cliente</h2>
+				<div id="frmLogin">
+					<fieldset>
+						<label>
+							<span>Login</span>
+							<asp:TextBox ID="login" runat="server"></asp:TextBox>							
+						</label>
+						<label>
+							<span>Senha</span>							
+							<asp:TextBox TextMode="Password" ID="senha" runat="server"></asp:TextBox>
+							<asp:Button ID="btnEntrar" CssClass="btnEntrar" runat="server" />														
+						</label>						
+						<a href="#">Criar conta</a> | <a href="#">Esqueceu a senha?</a>						
+					</fieldset>
+				</div>
+			</div>
+			
+			<div class="box-sidebar">
+				<h2>Buscar Produtos</h2>
+				<div class="busca">					
+					<fieldset>
+						<label class="lupa sprite-busca">Buscar</label>
+						<input type="text" class="sprite-busca" value="" name="q" id="buscaCampo" />
+						<button class="sprite-busca" id="btEnviar" type="submit"></button>
+					</fieldset>
+				</div>
+			</div>			
+			
+		</div>
+		<div class="clear"><!-- PARA LIMPAR O FLOAT --></div>
+	</div>
+	<div id="rodape">
+		<div id="rodape-centro">
+			<div class="endereco">
+				<p>Leia+ Jornais & Revistas</p>
+				<br />
+				<p>Av. República Argentina, 23 - Curitiba - PR<br /> <strong>Fone:</strong> (41) 3643 - 1551</p>
+				<br />
+				<br />
+				<img src="imagens/selo_certisign.gif" alt="" title="" />
+				
+			</div>			
+			<div class="institucional">				
+				<h2>Quick Menu</h2>
+				<ul>
+					<li><a href="#">Home</a></li>								
+					<li><a href="#">A Leia+</a></li>
+					<li><a href="#">Pos-Graduação</a></li>
+					<li><a href="#">Institucional</a></li>					
+					<li><a href="#">Trabalhe na Leia+</a></li>
+					<li><a href="#">Fale com a Leia+</a></li>					
+				</ul>
+			</div>
+			<div class="rodape-atendimento">				
+				<h2>Atendimento</h2>
+				<ul>
+					<li>Divulgação - (41) 3643 1551</li>
+					<li>Tesouraria - (41) 3643 1551</li>
+					<li>Coordenação - (41) 3643 1551</li>
+					<li>Ouvidoria - (41) 3643 1551</li>														
+				</ul>
+			</div>
+			<div class="rodape-convenio">
+				<a href="#">
+					<img src="imagens/influx-logo.png" alt="Convênio Influx" title="Convênio Influx" />
+				</a>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div class="copy-right">
+			<div class="rodape-autor">
+				<span>Design e Sistema por <strong>MRI Technologies</strong></span>
+			</div>
+			<span>Todos os direitos reservados</span>			
+		</div>
+		
+    </div><!-- WRAP -->
+    </form>
+</body>
+</html>
