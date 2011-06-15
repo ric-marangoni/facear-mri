@@ -12,6 +12,6 @@ namespace br.com.dao
 
         void alterar(T obj);
     
-        void deletar( T obj );
+        void deletar(T obj);
     }
 }

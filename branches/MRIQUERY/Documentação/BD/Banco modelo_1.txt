@@ -1,5 +1,5 @@
-CREATE DATABASE modelo_1;
-use modelo_1;
+CREATE DATABASE projeto_integrador_mriquery;
+use projeto_integrador_mriquery;
 
 CREATE TABLE tb_perfil(
 	id_perfil int not null auto_increment,

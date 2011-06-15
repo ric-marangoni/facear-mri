@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{FC801AD1-6B31-4A51-BAB5-4DD39D8DCC50}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -31,6 +31,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FluorineFx, Version=1.0.0.15, Culture=neutral, PublicKeyToken=1875756ba09931ab, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Bin\FluorineFx.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -53,6 +57,10 @@
     <ProjectReference Include="..\br.com.dao\br.com.dao.csproj">
       <Project>{B38D9E38-48BB-4341-8688-9A7F5CBDB670}</Project>
       <Name>br.com.dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\br.com.entidades\br.com.entidades.csproj">
+      <Project>{6AC1F742-33AD-426A-B788-EB752C520692}</Project>
+      <Name>br.com.entidades</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
