@@ -34,7 +34,7 @@ namespace br.com.servicos
 
         public bool deletarPerfil(Perfil perfil)
         {
-            if (perfil.id != null)
+            if (perfil.id != 0)
             {
                 daoPerfil.deletar(perfil);
             }

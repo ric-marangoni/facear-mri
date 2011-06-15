@@ -2,9 +2,15 @@
 <mx:TitleWindow xmlns:mx="http://www.adobe.com/2006/mxml" layout="vertical" width="766" height="720" showCloseButton="true" 
 				close="closePoup()"  styleName="panelContexto" xmlns:date="com.mriquery.componentes.date.*" 
 				xmlns:date1="mriquery.componentes.date.*" xmlns:mascaras="mriquery.componentes.mascaras.*" 
-				xmlns:endereco="mriquery.conteudo.endereco.*">
+				xmlns:endereco="mriquery.conteudo.endereco.*" creationComplete="createComplete()">
 	<mx:Script>
 		<![CDATA[
+			import mriquery.conteudo.perfil.WindowCadatrarPerfil;
+			import mriquery.events.EventsMryQuery;
+			import mx.collections.ArrayCollection;
+			import mx.rpc.events.FaultEvent;
+			import mriquery.actionScript.entidades.Perfil;
+			import mriquery.actionScript.entidades.PessoaFisica;
 			import mx.rpc.events.ResultEvent;
 			import mriquery.Util.Constantes;
 			import mriquery.Util.Util;
@@ -13,9 +19,32 @@
 			import mriquery.Util.Icones;
 			import mx.managers.PopUpManager;
 			
-			
+			////Variaveis
 			[Bindable]
-			var titulo:String;
+			var perfil:ArrayCollection = new ArrayCollection();
+			//////////////////// createComplete///////////////////////////////
+			
+			private function createComplete():void{
+				
+				listarPerfil();
+			}
+			
+			private function listarPerfil():void{
+				
+				roSalvarPerfil.listarPefil();	
+			}
+			
+			private function listarPerfilResul(event:ResultEvent):void{
+				
+				perfil = new ArrayCollection();
+				perfil = event.result as ArrayCollection;
+				
+			}
+			
+			private function listarPerfilFault(event:FaultEvent):void{
+				
+				Alert.show("Erro ao carregar Perfies","Informativo");
+			}
 			
 			public function tituloCadastra(titulo:String):void {
 				
@@ -25,13 +54,6 @@
 			private function closePoup():void {
 				
 				PopUpManager.removePopUp(this);
-			}
-			
-			private function cadastrarPerfil():void {
-				
-				var windowPerfil:AdicionarUmPerfil = new AdicionarUmPerfil();
-				PopUpManager.addPopUp(windowPerfil,this,true);
-				PopUpManager.centerPopUp(windowPerfil);
 			}
 			
 			private function pesquisar():void{
@@ -58,8 +80,12 @@
 	              Alert.show("Cep Não Encontrado","Informativo");
 	          }
 		  }
+		  
+		  
 		]]>
 	</mx:Script>
+	<mx:RemoteObject id="roSalvarPerfil" destination="fluorine" source="br.com.servicos.ServicoPerfil"  
+					showBusyCursor="true" result="listarPerfilResul(event)" fault="listarPerfilFault(event)"/>
 	<mx:HTTPService id="buscaCep" result="cepResultHandler(event)"
         method="POST" showBusyCursor="true" resultFormat="e4x"/>
         
@@ -81,13 +107,7 @@
 				<mx:TextInput  width="164"/>
 			</mx:FormItem>
 			<mx:FormItem label="Perfil :" color="#050505" required="true" direction="horizontal" width="495">
-				<mx:ComboBox  width="164" prompt="Selecione">
-					<mx:ArrayCollection>
-						<mx:String>Administrador</mx:String>
-						<mx:String>Outros</mx:String>
-					</mx:ArrayCollection>
-				</mx:ComboBox>
-				<mx:LinkButton label="Adicionar Perfil" click="cadastrarPerfil()"/>
+				<mx:ComboBox  width="164" id="cbPerfil" prompt="Selecione" labelField="perfil" dataProvider="{perfil}"/>
 			</mx:FormItem>
 			<mx:FormItem label="Setor :" color="#050505" required="true" direction="horizontal" width="495">
 				<mx:ComboBox  width="164" prompt="Selecione">

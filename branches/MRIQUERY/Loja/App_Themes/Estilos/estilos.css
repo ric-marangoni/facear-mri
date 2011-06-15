@@ -165,7 +165,7 @@ ul.produtos li {
 }
 
 ul.produtos li a.carrinho{
-	background: url("../../../../imagens/btAddCarrinho.png") no-repeat;
+	background: url("../../../imagens/btAddCarrinho.png") no-repeat;
 	border: 0;
 	width: 150px;
 	height: 29px;

@@ -74,6 +74,14 @@ package mriquery.Util{
 		[Embed(source="assets/imagens/img_buscar_cep.png")]
 		public static var img_buscar_cep:Class;
 		
+		[Bindable]
+		[Embed(source="assets/imagens/img_NovoPerfil.png")]
+		public static var img_NovoPerfil:Class;
+		
+		[Bindable]
+		[Embed(source="assets/imagens/img_add.png")]
+		public static var img_add:Class;
+		
 		
 		
 		

@@ -3,3 +3,8 @@ C:\Documents and Settings\Ricardo\Desktop\MRI\MRIQUERY\Loja\bin\Loja.pdb
 C:\Documents and Settings\Ricardo\Desktop\MRI\MRIQUERY\Loja\obj\Debug\ResolveAssemblyReference.cache
 C:\Documents and Settings\Ricardo\Desktop\MRI\MRIQUERY\Loja\obj\Debug\Loja.dll
 C:\Documents and Settings\Ricardo\Desktop\MRI\MRIQUERY\Loja\obj\Debug\Loja.pdb
+C:\Users\Irineu\Desktop\facear-mri\branches\MRIQUERY\Loja\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Irineu\Desktop\facear-mri\branches\MRIQUERY\Loja\obj\Debug\Loja.pdb
+C:\Users\Irineu\Desktop\facear-mri\branches\MRIQUERY\Loja\bin\Loja.dll
+C:\Users\Irineu\Desktop\facear-mri\branches\MRIQUERY\Loja\bin\Loja.pdb
+C:\Users\Irineu\Desktop\facear-mri\branches\MRIQUERY\Loja\obj\Debug\Loja.dll
