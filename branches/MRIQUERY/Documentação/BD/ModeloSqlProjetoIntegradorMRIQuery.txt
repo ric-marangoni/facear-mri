@@ -4,21 +4,9 @@ use  projeto_integrador_mriquery;
 CREATE TABLE TB_PERFIL(
 	ID_PERFIL int not null auto_increment,
 	PERFIL varchar(50) not null,
-	DESCRICAO varchar(100) 
+	DESCRICAO varchar(100), 
 	primary key(ID_PERFIL)
 );
-
-CREATE TABLE TB_FUNCIONARIO(
-	ID_FUNCIONARIO int not null auto_increment,
-	DATA_ADMISSAO date not null,
-	DATA_DEMISSAO date,
-	ID_PERFIL int not null,
-	ID_USUARIO int not null,
-	SETOR VARCHAR(100) NOT NULL,
-	primary key(ID_FUNCIONARIO),
-	foreign key(ID_USUARIO) references TB_USUARIO(ID_USUARIO)
-);
-
 
 CREATE TABLE TB_ENDERECO(
 	ID_ENDERECO int not null auto_increment,
@@ -60,6 +48,17 @@ CREATE TABLE TB_USUARIO(
 	foreign key(ID_ENDERECO_ALTERNATIVO) references TB_ENDERECO(ID_ENDERECO)
 );
 
+CREATE TABLE TB_FUNCIONARIO(
+	ID_FUNCIONARIO int not null auto_increment,
+	DATA_ADMISSAO date not null,
+	DATA_DEMISSAO date,
+	ID_PERFIL int not null,
+	ID_USUARIO int not null,
+	SETOR VARCHAR(100) NOT NULL,
+	primary key(ID_FUNCIONARIO),
+	foreign key(ID_USUARIO) references TB_USUARIO(ID_USUARIO)
+);
+
 CREATE TABLE TB_FORMA_PAGAMENTO(
 	ID_FORMA_PAGAMENTO int not null auto_increment,
 	NUMERO_CARTAO long,
@@ -93,7 +92,7 @@ CREATE TABLE TB_ASSINATURA(
 	ID_FORMA_PAGAMENTO int,
 	primary key(ID_ASSINATURA),
 	foreign key(ID_USUARIO) references TB_USUARIO(ID_USUARIO),
-	foreign key(ID_PLANO) references TD_PLANO(ID_PLANO),
+	foreign key(ID_PLANO) references TB_PLANO(ID_PLANO),
 	foreign key(ID_FORMA_PAGAMENTO) references TB_FORMA_PAGAMENTO(ID_FORMA_PAGAMENTO)	
 );
 
