@@ -2,7 +2,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{288AB784-4BA8-4A32-BD66-3B27F551CED8}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
@@ -57,6 +57,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cadastro_cliente.aspx.cs">
+      <DependentUpon>Cadastro_cliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadastro_cliente.aspx.designer.cs">
+      <DependentUpon>Cadastro_cliente.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Store.Master.cs">
       <DependentUpon>Store.Master</DependentUpon>
@@ -77,6 +84,7 @@
     <Content Include="App_Themes\Estilos\estilos.css" />
     <Content Include="App_Themes\Estilos\ie6.css" />
     <Content Include="App_Themes\Estilos\iepngfix.htc" />
+    <Content Include="Cadastro_cliente.aspx" />
     <Content Include="imagens\banner_prestashop.jpg" />
     <Content Include="imagens\banner_virtuemart.jpg" />
     <Content Include="imagens\bg-car.jpg" />

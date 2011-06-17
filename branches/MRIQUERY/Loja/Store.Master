@@ -16,7 +16,7 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="Loja" runat="server">
     <div id="wrap">
 		<div id="topo">
 			<ul id="menu">				
@@ -25,7 +25,7 @@
 				<li><a href="#">Institucional</a></li>
 				<li><a href="#">Pos-Graduação</a></li>
 				<li><a href="#">A Leia+</a></li>
-				<li><a href="#">Home</a></li>
+				<li><a href="Default.aspx">Home</a></li>
 			</ul>
 			<div class="clear"><!-- --></div>
 		</div>
@@ -50,7 +50,7 @@
 							<asp:TextBox TextMode="Password" ID="senha" runat="server"></asp:TextBox>
 							<asp:Button ID="btnEntrar" CssClass="btnEntrar" runat="server" />														
 						</label>						
-						<a href="#">Criar conta</a> | <a href="#">Esqueceu a senha?</a>						
+						<a href="Cadastro_cliente.aspx">Criar conta</a> | <a href="#">Esqueceu a senha?</a>						
 					</fieldset>
 				</div>
 			</div>
