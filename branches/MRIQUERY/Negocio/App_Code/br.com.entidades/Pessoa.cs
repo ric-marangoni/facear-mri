@@ -65,7 +65,7 @@ namespace br.com.entidades
         public long TelefoneCelular
         {
             set { this.telefoneCelular = value; }
-            get { return TelefoneCelular; }
+            get { return telefoneCelular; }
         }
         public long TelefoneComercial
         {

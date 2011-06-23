@@ -20,7 +20,7 @@ namespace br.com.dao
                 comando = new MySqlCommand();
                 conexao.ConnectionString = conexaoBanco;
                 string sql = "INSERT INTO TB_ENDERECO(LOGRADOURO,CIDADE,CEP,ESTADO,NUMERO,COMPLEMENTO)"+
-                "+VALUES(@LOGRADOURO,@CIDADE,@CEP,@ESTADO,@NUMERO,@COMPLEMENTO)";
+                "VALUES(@LOGRADOURO,@CIDADE,@CEP,@ESTADO,@NUMERO,@COMPLEMENTO)";
                 conexao.Open();
                 comando.CommandText = sql;
                 comando.Connection = conexao;

@@ -18,6 +18,15 @@ namespace Loja
         protected void Page_Load(object sender, EventArgs e)
         {
             Page.Title = "Loja Leia+";
+            
+            if ((String)Session["login"] != null) {
+                frmLogin.InnerText = Convert.ToString(Session["login"]);
+            }
+        }
+
+        protected void btnEntrar_Click(object sender, EventArgs e)
+        {
+            Session["login"] = btnEntrar.Text;
         }
     }
 }

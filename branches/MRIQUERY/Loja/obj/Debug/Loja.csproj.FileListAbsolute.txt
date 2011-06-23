@@ -8,3 +8,12 @@ C:\Documents and Settings\Ricardo\Desktop\MRI\MRIQUERY\Loja\bin\Loja.pdb
 C:\Documents and Settings\Ricardo\Desktop\MRI\MRIQUERY\Loja\obj\Debug\ResolveAssemblyReference.cache
 C:\Documents and Settings\Ricardo\Desktop\MRI\MRIQUERY\Loja\obj\Debug\Loja.dll
 C:\Documents and Settings\Ricardo\Desktop\MRI\MRIQUERY\Loja\obj\Debug\Loja.pdb
+C:\Documents and Settings\Ricardo\Desktop\MRI\MRIQUERY\Loja\bin\br.com.entidades.dll
+C:\Documents and Settings\Ricardo\Desktop\MRI\MRIQUERY\Loja\bin\br.com.servicos.dll
+C:\Documents and Settings\Ricardo\Desktop\MRI\MRIQUERY\Loja\bin\br.com.dao.dll
+C:\Documents and Settings\Ricardo\Desktop\MRI\MRIQUERY\Loja\bin\log4net.dll
+C:\Documents and Settings\Ricardo\Desktop\MRI\MRIQUERY\Loja\bin\FluorineFx.dll
+C:\Documents and Settings\Ricardo\Desktop\MRI\MRIQUERY\Loja\bin\antlr.runtime.dll
+C:\Documents and Settings\Ricardo\Desktop\MRI\MRIQUERY\Loja\bin\br.com.dao.pdb
+C:\Documents and Settings\Ricardo\Desktop\MRI\MRIQUERY\Loja\bin\br.com.entidades.pdb
+C:\Documents and Settings\Ricardo\Desktop\MRI\MRIQUERY\Loja\bin\br.com.servicos.pdb

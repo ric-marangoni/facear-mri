@@ -8,7 +8,7 @@ namespace br.com.entidades
     public class Cliente
     {
         private int id;
-        private Pessoa pessoa;
+        private PessoaFisica pessoaFisica_;
         private Assinatura assinatura;
         private Endereco enderecoAlternativo;
         private FormaPagamento formaDePagamento;
@@ -25,10 +25,10 @@ namespace br.com.entidades
             get { return assinatura; }
         }
 
-        public Pessoa Pessoa
+        public PessoaFisica PessoaFisica
         {
-            set { this.pessoa = value; }
-            get { return pessoa; }
+            set { this.pessoaFisica_ = value; }
+            get { return pessoaFisica_; }
         }
 
         public Endereco EnderecoAlternativo
