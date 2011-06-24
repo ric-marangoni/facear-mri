@@ -423,7 +423,7 @@ ul.menu-rodape li a:hover{
 	padding: 7px;
 }
 
-.box-sidebar-bg  h2, .box-sidebar h2, #box-conteudo-bg h2 {
+.box-sidebar-bg  h2, .box-sidebar h2, #boxConteudo-bg h2 {
 	color: #006699;
     font-size: 18px;
     letter-spacing: -0.04em;
@@ -431,7 +431,7 @@ ul.menu-rodape li a:hover{
 	font-weight: normal;	
 }
 
-#box-conteudo {	
+#boxConteudo {	
 	width: 595px;	
 	border-top: 1px solid #E5E5E5;
 	border-right: 1px solid #E5E5E5;
