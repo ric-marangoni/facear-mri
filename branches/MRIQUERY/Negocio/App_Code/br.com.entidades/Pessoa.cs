@@ -8,19 +8,19 @@ namespace br.com.entidades
     
     public abstract class Pessoa
     {
-        private String status;
+        private int status;
         private DateTime dataCadastro;
         private String senha;
         private String login;
         private Endereco endereco;
         private String emailPessoal;
         private String emailComercial;
-        private long telefoneResidencial;
-        private long telefoneCelular;
-        private long telefoneComercial;
+        private String telefoneResidencial;
+        private String telefoneCelular;
+        private String telefoneComercial;
 
          
-        public String Status
+        public int Status
         {
             set { this.status = value; }
             get { return status; }
@@ -57,17 +57,17 @@ namespace br.com.entidades
             set { this.emailPessoal = value; }
             get { return emailPessoal; }
         }
-        public long TelefoneResidencial
+        public String TelefoneResidencial
         {
             set { this.telefoneResidencial = value; }
             get { return telefoneResidencial; }
         }
-        public long TelefoneCelular
+        public String TelefoneCelular
         {
             set { this.telefoneCelular = value; }
             get { return telefoneCelular; }
         }
-        public long TelefoneComercial
+        public String TelefoneComercial
         {
             set { this.telefoneComercial = value; }
             get { return telefoneComercial; }

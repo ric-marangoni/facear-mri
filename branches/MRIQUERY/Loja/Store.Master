@@ -37,9 +37,15 @@
         </div>
         
         <div id="side-bar">					
-			<div class="box-sidebar-bg">
-				<h2>Sou Cliente</h2>
-				<div id="frmLogin" runat="server">					
+			<div runat="server" id="boxLogin" class="box-sidebar-bg">			
+				<h2 id="loginTitle" runat="server">Já sou cliente</h2>
+				<div id="logedUser" runat="server" visible="false">
+				    <asp:Label ID="userName" runat="server"></asp:Label> | 
+				    <asp:LinkButton runat="server" ID="editarConta" Text="Editar conta" 
+                        onclick="editarConta_Click"></asp:LinkButton> |
+				    <a href="?logout=1">Sair</a>
+				</div>
+				<div id="frmLogin" runat="server">			   
 				    <fieldset>				    
 					<label>
 						<span>Login</span>
@@ -52,7 +58,7 @@
                         onclick="btnEntrar_Click" />														
 					</label>						
 					<a href="Cadastro_cliente.aspx">Criar conta</a> | <a href="#">Esqueceu a senha?</a>						
-				    </fieldset>					
+				    </fieldset>					    			
 				</div>
 			</div>
 			

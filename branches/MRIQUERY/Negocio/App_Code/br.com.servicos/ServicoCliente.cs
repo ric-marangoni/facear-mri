@@ -19,5 +19,12 @@ namespace br.com.servicos
 
             return true;
         }
+
+        public Cliente pegarCliente(String login, String senha) 
+        {
+            Cliente cliente = daoPessoaFisica.pegaClientePeloLogin(login, senha);
+
+            return cliente;
+        }
     }
 }

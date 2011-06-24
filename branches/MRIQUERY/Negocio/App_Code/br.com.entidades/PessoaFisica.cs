@@ -10,7 +10,7 @@ namespace br.com.entidades
        private String nome;
        private DateTime dataNascimento;
        private String sexo;
-       private long cpf;
+       private String cpf;
 
        public int Id
        {
@@ -36,7 +36,7 @@ namespace br.com.entidades
            get { return sexo; }
        }
 
-       public long Cpf
+       public String Cpf
        {
            set { this.cpf = value; }
            get { return cpf; }

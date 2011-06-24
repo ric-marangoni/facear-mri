@@ -3,6 +3,7 @@ using System.Data;
 using System.Configuration;
 using MySql.Data.MySqlClient;
 using br.com.entidades;
+using System.Collections.Generic;
 
 namespace br.com.dao
 {
@@ -60,6 +61,57 @@ namespace br.com.dao
         public void deletar(PessoaFisica obj)
         {
            
+        }
+
+        public Cliente pegaClientePeloLogin(String login, String senha)
+        {
+            Cliente cliente = new Cliente();
+            PessoaFisica pessoa = new PessoaFisica();
+
+            try
+            {
+                conexao = new MySqlConnection();
+                comando = new MySqlCommand();
+                conexao.ConnectionString = conexaoBanco;
+                string sql = "SELECT ID_USUARIO, NOME,SEXO,DATA_NASCIMENTO,CPF_CNPJ,SENHA,LOGIN,STATUS,EMAIL_PESSOAL,EMAIL_COMERCIAL,TELEFONE_COMERCIAL,TELEFONE_CELULAR,TELEFONE_RESIDENCIAL,DATA_CADASTRO,ID_ENDERECO FROM TB_USUARIO" +
+                             " WHERE LOGIN = @LOGIN AND SENHA = @SENHA";
+                conexao.Open();
+                comando.CommandText = sql;
+                comando.Connection = conexao;
+                comando.Parameters.AddWithValue("@LOGIN", login);
+                comando.Parameters.AddWithValue("@SENHA", senha);
+
+                MySqlDataReader r = comando.ExecuteReader();
+                r.Read();
+                                               
+                pessoa.Id = (int)r["ID_USUARIO"];
+                pessoa.Nome = (String)r["NOME"];
+                pessoa.Login = (String)r["LOGIN"];
+                pessoa.Senha = (String)r["SENHA"];
+                pessoa.Sexo = (String)r["SEXO"];
+                pessoa.DataNascimento = (DateTime)r["DATA_NASCIMENTO"];
+                pessoa.Cpf = (String)r["CPF_CNPJ"];
+                pessoa.Status = (int)r["STATUS"];
+                pessoa.EmailPessoal = (String)r["EMAIL_PESSOAL"];
+                pessoa.EmailComercial = (String)r["EMAIL_COMERCIAL"];
+                pessoa.TelefoneResidencial = (String)r["TELEFONE_RESIDENCIAL"];
+                pessoa.TelefoneCelular = (String)r["TELEFONE_CELULAR"];
+                pessoa.TelefoneComercial = (String)r["TELEFONE_COMERCIAL"];
+                
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine("Erro" + ex);
+            }
+            finally
+            {
+                conexao.Close();
+                cliente.PessoaFisica = pessoa;
+            }
+
+            return cliente;
+                        
+            
         }
         
     }
