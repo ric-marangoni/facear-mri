@@ -40,8 +40,8 @@ form label {
 	display: block;
 }
 
-form label span {
-	display: block;	
+form label span {	
+	display: block;
 	color: #333;	
 }
 
@@ -61,7 +61,7 @@ form label select {
 	width: 150px;
 }
 
-input[name="login"] {
+input[name="ctl00$login"] {
 	width: 165px;
 }
 
@@ -142,21 +142,21 @@ ul#menu li ul li{
 
 ul#menu li ul li a{float:none;}
 
-#frmLogin {
+#ctl00_frmLogin {
 	width: 239px;
 	margin: 20px 0 5px 35px;	
 }
 
-#frmLogin input {
+#ctl00_frmLogin input {
 	color: #333;
 	font-weight: bold;
 }
 
-#frmLogin a {
+#ctl00_frmLogin a {
 	font-size: 11px;	
 }
 
-#frmLogin a:hover {
+#ctl00_frmLogin a:hover {
 	text-decoration: none;
 }
 
@@ -423,7 +423,7 @@ ul.menu-rodape li a:hover{
 	padding: 7px;
 }
 
-.box-sidebar-bg  h2, .box-sidebar h2, #boxConteudo-bg h2 {
+.box-sidebar-bg  h2, .box-sidebar h2, #ctl00_boxLogin-bg h2 {
 	color: #006699;
     font-size: 18px;
     letter-spacing: -0.04em;
@@ -431,11 +431,9 @@ ul.menu-rodape li a:hover{
 	font-weight: normal;	
 }
 
-#boxConteudo {	
-	width: 595px;	
+#ctl00_boxLogin {	
 	border-top: 1px solid #E5E5E5;
-	border-right: 1px solid #E5E5E5;
-	margin-bottom: 50px;
+	border-right: 1px solid #E5E5E5;	
 }
 
 #menu-rodape{	
@@ -470,14 +468,30 @@ ul.menu-rodape li a:hover{
 	width: 150px;
 }
 
-.frm-default {
-	margin: 0 0 0 35px;
+.frm-default {	
 	padding: 25px 0;
 	border-right: 1px solid #EFEFEF;
 }
 
+.frm-default fieldset {
+	background: #F4F8FB;
+	padding-top: 15px;
+	margin-bottom: 20px;
+}
+
+.frm-default h2 {
+	color: #333;
+	border-bottom: 1px solid #777;
+	font-weight: bold;
+	font-size: 18px;
+}
+
 .medio {
-	width: 470px;
+	width: 305px;
+}
+
+.grande {
+	width: 469px;
 }
 
 .float-left {

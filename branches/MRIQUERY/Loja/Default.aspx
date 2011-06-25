@@ -39,7 +39,7 @@
 		    <h1>Revistas</h1>
 		    <ul class="produtos">
 			    <li>
-				    <a href="#">
+				    <a href="#" rel="tooltip" title="sajkdsajdi">
 					    <img src="imagens/revistas/capa_info.jpg" alt="" />
 				    </a>
 				    <h2>

@@ -14,33 +14,6 @@ namespace Loja {
     public partial class Cadastro_cliente {
         
         /// <summary>
-        /// cdrClienteLogin control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox cdrClienteLogin;
-        
-        /// <summary>
-        /// cdrSenha control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox cdrSenha;
-        
-        /// <summary>
-        /// cdrConfirmaSenha control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox cdrConfirmaSenha;
-        
-        /// <summary>
         /// cdrNome control.
         /// </summary>
         /// <remarks>
@@ -77,13 +50,49 @@ namespace Loja {
         protected global::System.Web.UI.WebControls.TextBox cdrCpf;
         
         /// <summary>
-        /// cdrEndereco control.
+        /// cdrClienteLogin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox cdrEndereco;
+        protected global::System.Web.UI.WebControls.TextBox cdrClienteLogin;
+        
+        /// <summary>
+        /// cdrSenha control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox cdrSenha;
+        
+        /// <summary>
+        /// cdrConfirmaSenha control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox cdrConfirmaSenha;
+        
+        /// <summary>
+        /// cdrEmailPessoal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox cdrEmailPessoal;
+        
+        /// <summary>
+        /// cdrEmailComercial control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox cdrEmailComercial;
         
         /// <summary>
         /// cdrTelResidencial control.
@@ -113,22 +122,13 @@ namespace Loja {
         protected global::System.Web.UI.WebControls.TextBox cdrTelComercial;
         
         /// <summary>
-        /// cdrEmailPessoal control.
+        /// cdrEndereco control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox cdrEmailPessoal;
-        
-        /// <summary>
-        /// cdrEmailComercial control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox cdrEmailComercial;
+        protected global::System.Web.UI.WebControls.TextBox cdrEndereco;
         
         /// <summary>
         /// btnCadastrarCliente control.
