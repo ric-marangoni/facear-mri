@@ -35,7 +35,7 @@
 	<div class="border-shadow"></div>
 	<asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
 	<asp:UpdatePanel ID="boxConteudo" runat="server" UpdateMode="Always">		
-		<ContentTemplate>
+		<ContentTemplate>		    
 		    <h1>Revistas</h1>
 		    <ul class="produtos">
 			    <li>
@@ -45,9 +45,8 @@
 				    <h2>
 					    <a href="#">Revista Info</a>
 				    </h2>
-				    <h3>R$59,90/mês</h3>
-				    				    
-				    <asp:LinkButton  PostBackUrl="?item=1&cat=1" CssClass="carrinho" runat="server"></asp:LinkButton>
+				    <h3>R$59,90/mês</h3>				    				    
+				    <asp:LinkButton  ID="addItem" CommandArgument='<%# Eval("ID_PRODUTO") %>' CommandName="Adicionar" CssClass="carrinho" runat="server"></asp:LinkButton>
 			    </li>		    
 		    </ul>
 		    <div class="clear"></div>
