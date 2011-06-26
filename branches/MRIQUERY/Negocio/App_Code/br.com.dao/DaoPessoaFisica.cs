@@ -67,14 +67,19 @@ namespace br.com.dao
         {
             Cliente cliente = new Cliente();
             PessoaFisica pessoa = new PessoaFisica();
+            Endereco endereco = new Endereco();
 
             try
             {
                 conexao = new MySqlConnection();
                 comando = new MySqlCommand();
                 conexao.ConnectionString = conexaoBanco;
-                string sql = "SELECT ID_USUARIO, NOME,SEXO,DATA_NASCIMENTO,CPF_CNPJ,SENHA,LOGIN,STATUS,EMAIL_PESSOAL,EMAIL_COMERCIAL,TELEFONE_COMERCIAL,TELEFONE_CELULAR,TELEFONE_RESIDENCIAL,DATA_CADASTRO,ID_ENDERECO FROM TB_USUARIO" +
-                             " WHERE LOGIN = @LOGIN AND SENHA = @SENHA";
+                string sql = "SELECT U.ID_USUARIO, U.NOME, U.SEXO, U.DATA_NASCIMENTO, U.CPF_CNPJ, U.SENHA, U.LOGIN, U.STATUS," +
+                             "U.EMAIL_PESSOAL, U.EMAIL_COMERCIAL, U.TELEFONE_COMERCIAL, U.TELEFONE_CELULAR, U.TELEFONE_RESIDENCIAL," +
+                             "U.DATA_CADASTRO, END.CEP, END.ESTADO, END.CIDADE, END.BAIRRO, END.LOGRADOURO, END.NUMERO, END.COMPLEMENTO " +
+                             "FROM TB_USUARIO U " +
+                             "INNER JOIN TB_ENDERECO END ON U.ID_ENDERECO = END.ID_ENDERECO " +
+                             "WHERE LOGIN = @LOGIN AND SENHA = @SENHA";
                 conexao.Open();
                 comando.CommandText = sql;
                 comando.Connection = conexao;
@@ -98,6 +103,16 @@ namespace br.com.dao
                 pessoa.TelefoneCelular = (String)r["TELEFONE_CELULAR"];
                 pessoa.TelefoneComercial = (String)r["TELEFONE_COMERCIAL"];
                 
+                endereco.Cep = (String)r["CEP"];
+                endereco.Cidade = (String)r["CIDADE"];
+                endereco.Estado = (String)r["ESTADO"];
+                endereco.Bairro = (String)r["BAIRRO"];
+                endereco.Logradouro = (String)r["LOGRADOURO"];
+                endereco.Numero = (String)r["NUMERO"];
+                endereco.Complemento = (String)r["COMPLEMENTO"];
+                
+                pessoa.Endereco = endereco;
+                
             }
             catch(Exception ex)
             {
@@ -109,9 +124,42 @@ namespace br.com.dao
                 cliente.PessoaFisica = pessoa;
             }
 
-            return cliente;
-                        
+            return cliente;                        
             
+        }
+
+        public int verificaDisponibilidadeLogin(String login)
+        {
+            int qtd = 0;
+            
+            try
+            {
+                conexao = new MySqlConnection();
+                comando = new MySqlCommand();
+                conexao.ConnectionString = conexaoBanco;
+                string sql = "SELECT COUNT(ID_USUARIO)AS QTD FROM TB_USUARIO" +
+                             " WHERE LOGIN = @LOGIN";
+                conexao.Open();
+                comando.CommandText = sql;
+                comando.Connection = conexao;
+                comando.Parameters.AddWithValue("@LOGIN", login);                
+
+                MySqlDataReader r = comando.ExecuteReader();
+                r.Read();
+
+                qtd = Convert.ToInt32((Int64)r["QTD"]);
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro" + ex);
+            }
+            finally
+            {
+                conexao.Close();                
+            }
+
+            return qtd;  
         }
         
     }

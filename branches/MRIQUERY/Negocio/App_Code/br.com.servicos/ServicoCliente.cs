@@ -26,5 +26,19 @@ namespace br.com.servicos
 
             return cliente;
         }
+
+        public bool verificaDisponibilidadeLogin(String login)
+        {
+            int qtd = daoPessoaFisica.verificaDisponibilidadeLogin(login);
+
+            if (qtd == 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

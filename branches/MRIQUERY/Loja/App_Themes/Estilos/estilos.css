@@ -486,6 +486,24 @@ ul.menu-rodape li a:hover{
 	font-size: 18px;
 }
 
+.msg_erro {
+	color: #EE2C2C;	
+	padding-bottom: 6px;
+	font-weight: bold;
+	display: block;
+}
+
+.msg_sucesso {	
+	color: #32CD32;	
+	padding-bottom: 6px;
+	font-weight: bold;
+	display: block;
+}
+
+.btnVerificar {	
+	padding: 3px;	
+}
+
 .medio {
 	width: 305px;
 }

@@ -27,16 +27,21 @@
 		        <asp:TextBox runat="server" ID="cdrCpf"></asp:TextBox>		     
 	        </label>	    
 	        <div class="clear"><!--  --></div>
-            <label>
-		        <span>Login</span>		    
+            <label class="float-left">
+		        <span id="lblLogin" runat="server">Login</span>		                		    
 		        <asp:TextBox runat="server" ID="cdrClienteLogin" CssClass="medio"></asp:TextBox>		     
 	        </label>
+	        <br />
+	        <asp:Button runat="server" ID="verificarDisponibilidade" CssClass="btnVerificar" Text="Verificar disponibilidade" OnClick="verificarDisponibilidade_Click" />
+	        <div class="clear"><!--  --></div>	        
+	        <asp:Label runat="server" Visible="false" ID="msgDisponibilidade"></asp:Label>		
+	        <div class="clear"><!--  --></div>	        
 	        <label class="float-left">
-		        <span>Senha</span>		    
+		        <span id="lblSenha" runat="server">Senha</span>		    
 		        <asp:TextBox TextMode="Password" runat="server" ID="cdrSenha"></asp:TextBox>		      
 	        </label>
 	        <label>
-		        <span>Confirme</span>		     
+		        <span id="lblConfirmaSenha" runat="server">Confirme</span>		     
 		        <asp:TextBox TextMode="Password" runat="server" ID="cdrConfirmaSenha"></asp:TextBox>
 	        </label>
 	        <div class="clear"></div>
@@ -82,7 +87,7 @@
 	        <div class="clear"><!--  --></div>
 	        <label class="float-left">
 		        <span>Logradouro</span>		    
-		        <asp:TextBox runat="server" ID="cdrEndereco" CssClass="medio"></asp:TextBox>
+		        <asp:TextBox runat="server" ID="cdrLogradouro" CssClass="medio"></asp:TextBox>
 	        </label>
 	        <label>
 		        <span>Numero</span>		    
@@ -133,7 +138,7 @@
 	    <div class="clear"><!--  --></div>
     	
     	<br /><br />	    
-	    <asp:Button runat="server" CssClass="btn-enviar" ID="btnCadastrarCliente" Enabled="false" onclick="btnCadastrarCliente_Click" />
+	    <asp:Button runat="server" CssClass="btn-enviar" ID="btnCadastrarCliente" OnClick="btnCadastrarCliente_Click" />
 	    
 	</div>
 </asp:Content>

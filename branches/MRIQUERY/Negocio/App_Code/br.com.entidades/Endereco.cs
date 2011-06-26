@@ -11,8 +11,9 @@ namespace br.com.entidades
         private String estado;
         private String cidade;
         private String logradouro;
-        private long cep;
-        private long numero;
+        private String cep;
+        private String numero;
+        private String bairro;
         private String complemento;
 
         public int Id
@@ -36,16 +37,23 @@ namespace br.com.entidades
             set { this.logradouro = value; }
             get { return logradouro; }
         }
-        public long Cep
+        public String Cep
         {
             set { this.cep = value; }
             get { return cep; }
         }
-        public long Numero
+        public String Numero
         {
             set { this.numero = value; }
             get { return numero; }
         }
+
+        public String Bairro
+        {
+            set { this.bairro = value; }
+            get { return bairro; }
+        }
+
         public String Complemento
         {
             set { this.complemento = value; }

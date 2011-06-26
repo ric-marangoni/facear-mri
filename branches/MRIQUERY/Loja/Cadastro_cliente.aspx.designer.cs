@@ -50,6 +50,15 @@ namespace Loja {
         protected global::System.Web.UI.WebControls.TextBox cdrCpf;
         
         /// <summary>
+        /// lblLogin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblLogin;
+        
+        /// <summary>
         /// cdrClienteLogin control.
         /// </summary>
         /// <remarks>
@@ -59,6 +68,33 @@ namespace Loja {
         protected global::System.Web.UI.WebControls.TextBox cdrClienteLogin;
         
         /// <summary>
+        /// verificarDisponibilidade control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button verificarDisponibilidade;
+        
+        /// <summary>
+        /// msgDisponibilidade control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label msgDisponibilidade;
+        
+        /// <summary>
+        /// lblSenha control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblSenha;
+        
+        /// <summary>
         /// cdrSenha control.
         /// </summary>
         /// <remarks>
@@ -66,6 +102,15 @@ namespace Loja {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox cdrSenha;
+        
+        /// <summary>
+        /// lblConfirmaSenha control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblConfirmaSenha;
         
         /// <summary>
         /// cdrConfirmaSenha control.
@@ -122,13 +167,130 @@ namespace Loja {
         protected global::System.Web.UI.WebControls.TextBox cdrTelComercial;
         
         /// <summary>
-        /// cdrEndereco control.
+        /// cdrCep control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox cdrEndereco;
+        protected global::System.Web.UI.WebControls.TextBox cdrCep;
+        
+        /// <summary>
+        /// cdrCidade control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox cdrCidade;
+        
+        /// <summary>
+        /// cdrEstado control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox cdrEstado;
+        
+        /// <summary>
+        /// cdrLogradouro control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox cdrLogradouro;
+        
+        /// <summary>
+        /// cdrNumero control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox cdrNumero;
+        
+        /// <summary>
+        /// cdrBairro control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox cdrBairro;
+        
+        /// <summary>
+        /// cdrComplemento control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox cdrComplemento;
+        
+        /// <summary>
+        /// cdrAlternativoCep control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox cdrAlternativoCep;
+        
+        /// <summary>
+        /// cdrAlternativoCidade control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox cdrAlternativoCidade;
+        
+        /// <summary>
+        /// cdrAlternativoEstado control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox cdrAlternativoEstado;
+        
+        /// <summary>
+        /// cdrAlternativoLogradouro control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox cdrAlternativoLogradouro;
+        
+        /// <summary>
+        /// cdrAlternativoNumero control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox cdrAlternativoNumero;
+        
+        /// <summary>
+        /// cdrAlternativoBairro control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox cdrAlternativoBairro;
+        
+        /// <summary>
+        /// cdrAlternativoComplemento control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox cdrAlternativoComplemento;
         
         /// <summary>
         /// btnCadastrarCliente control.
