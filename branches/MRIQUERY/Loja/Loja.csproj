@@ -104,6 +104,7 @@
     <Content Include="imagens\influx-logo.png" />
     <Content Include="imagens\java_banner.jpg" />
     <Content Include="imagens\jornais\newspaper-1.jpg" />
+    <Content Include="imagens\loading.gif" />
     <Content Include="imagens\logo-twitter.png" />
     <Content Include="imagens\marcador.png" />
     <Content Include="imagens\revistas\capa_arquitetura.jpg" />
@@ -146,7 +147,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="imagens\jornais\.svn\entries" />
-    <None Include="imagens\revistas\.svn\entries" />
     <None Include="imagens\revistas\.svn\props\capa_arquitetura.jpg.svn-work" />
     <None Include="imagens\revistas\.svn\props\capa_boaforma.jpg.svn-work" />
     <None Include="imagens\revistas\.svn\props\capa_bonsfluidos.jpg.svn-work" />
@@ -170,7 +170,6 @@
     <None Include="imagens\revistas\.svn\props\capa_viagem.jpg.svn-work" />
     <None Include="imagens\revistas\.svn\props\capa_womenshealth.jpg.svn-work" />
     <None Include="imagens\revistas\.svn\props\Thumbs.db.svn-work" />
-    <None Include="imagens\revistas\Thumbs.db" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Negocio\App_Code\br.com.entidades\br.com.entidades.csproj">

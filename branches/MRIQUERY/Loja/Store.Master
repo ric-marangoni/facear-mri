@@ -73,19 +73,12 @@
 					</fieldset>
 				</div>
 			</div>                        
-            
-            <asp:UpdateProgress ID="UpdateProgress1" runat="server">
-                <ContentTemplate>
-                    <div>
-                        <img src="imagens/loading.gif" alt="" />
-                    </div>
-                </ContentTemplate>
-            </asp:UpdateProgress>
-            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                        
+            <asp:UpdatePanel ID="updtCesta" runat="server">
                 <ContentTemplate>
 			        <div id="boxCestaCompras">
 			            <h4>Cesta de compras</h4>
-                        <p id="cart_info" runat="server">Você não tem itens em sua cesta.</p>
+                        <p id="cart_info" runat="server">Você não tem itens em sua cesta.</p>                        
                         <asp:LinkButton CssClass="btn-checkout" ID="lnkCheckout" PostBackUrl="#" Visible="false" runat="server"></asp:LinkButton>
 			        </div>
 			    </ContentTemplate>

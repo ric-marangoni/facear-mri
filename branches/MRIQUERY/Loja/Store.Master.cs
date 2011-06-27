@@ -37,7 +37,7 @@ namespace Loja
             }
 
             if ((List<Produto>)Session["ListaProdutos"] != null)
-            {
+            {                
                 var listaProdutos = (List<Produto>)Session["ListaProdutos"];
 
                 var pluralProduto = " item";
@@ -49,12 +49,13 @@ namespace Loja
 
                 if (listaProdutos.Count > 0)
                 {
-                    cart_info.InnerHtml = "<small style=\"font-size:11px\">Você tem " + "<strong style=\"color: #006699;\">" + listaProdutos.Count + "</strong>" + pluralProduto + " na cesta</small>    ";
-                    lnkCheckout.Visible = true;
+                    cart_info.InnerHtml = "<small style=\"font-size:11px\">Você tem " + "<strong style=\"color: #006699;\">" + listaProdutos.Count + "</strong>" + pluralProduto + " na cesta</small>    ";                    
+                    lnkCheckout.Visible = true;                    
+
                 }
                 else
                 {
-                    cart_info.InnerText = "Você não tem itens em sua cesta.";
+                    cart_info.InnerText = "Você não tem itens em sua cesta.";                    
                 }
             }            
         }
