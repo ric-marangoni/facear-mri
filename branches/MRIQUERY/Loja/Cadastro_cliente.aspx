@@ -8,7 +8,7 @@
          <fieldset>           
              <label>
 		        <span>Nome</span>		    
-		        <asp:TextBox runat="server" ID="cdrNome" CssClass="grande"></asp:TextBox>		     
+		        <asp:TextBox runat="server" ID="cdrNome" rel="obrigatorio" CssClass="grande"></asp:TextBox>		     
 	        </label>
 	        <label class="float-left">
 		        <span>Sexo</span>

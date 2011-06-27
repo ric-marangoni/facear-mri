@@ -14,15 +14,6 @@ namespace Loja {
     public partial class WebForm1 {
         
         /// <summary>
-        /// ScriptManager1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.ScriptManager ScriptManager1;
-        
-        /// <summary>
         /// boxConteudo control.
         /// </summary>
         /// <remarks>
@@ -32,12 +23,39 @@ namespace Loja {
         protected global::System.Web.UI.UpdatePanel boxConteudo;
         
         /// <summary>
-        /// addItem control.
+        /// dtlProdutos control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton addItem;
+        protected global::System.Web.UI.WebControls.DataList dtlProdutos;
+        
+        /// <summary>
+        /// ProdutoID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField ProdutoID;
+        
+        /// <summary>
+        /// mpeViewProduto control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.ModalPopupExtender mpeViewProduto;
+        
+        /// <summary>
+        /// pnlDados control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlDados;
     }
 }

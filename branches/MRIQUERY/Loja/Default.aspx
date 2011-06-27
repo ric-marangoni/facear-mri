@@ -1,4 +1,6 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Store.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Loja.WebForm1" Title="Untitled Page" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -32,39 +34,27 @@
 			<a href="#"></a>
 		</p>
 	</div>    
-	<div class="border-shadow"></div>
-	<asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+	<div class="border-shadow"></div>	
 	<asp:UpdatePanel ID="boxConteudo" runat="server" UpdateMode="Always">		
-		<ContentTemplate>		    
+		<ContentTemplate>
 		    <h1>Revistas</h1>
-		    <ul class="produtos">
-			    <li>
-				    <a href="#" rel="tooltip" title="sajkdsajdi">
-					    <img src="imagens/revistas/capa_info.jpg" alt="" />
-				    </a>
-				    <h2>
-					    <a href="#">Revista Info</a>
-				    </h2>
-				    <h3>R$59,90/mês</h3>				    				    
-				    <asp:LinkButton  ID="addItem" CommandArgument='<%# Eval("ID_PRODUTO") %>' CommandName="Adicionar" CssClass="carrinho" runat="server"></asp:LinkButton>
-			    </li>		    
-		    </ul>
-		    <div class="clear"></div>
-		    <div class="borda-pontilhada"></div>
-		    <h1>Jornais</h1>
-		    <ul class="produtos">
-			    <li>
-				    <a href="#">
-					    <img src="imagens/jornais/newspaper-1.jpg" alt="" />
-				    </a>
-				    <h2>
-					    <a href="#">Jornal O Globo</a>
-				    </h2>
-				    <h3>R$59,90/mês</h3>
-				    <a id="" href="javascript:void(0);" class="carrinho"></a>
-			    </li>			   			
-		    </ul>
-		    <div class="clear"></div>
-	    </ContentTemplate>		
-	</asp:UpdatePanel>    
+            <asp:DataList ID="dtlProdutos" CssClass="produtos" runat="server" OnCancelCommand="dtlProdutos_CancelCommand" OnDeleteCommand="dtlProdutos_DeleteCommand"
+                DataKeyField="Id">
+                <ItemTemplate>
+                    <img src="imagens/revistas/capa_info.jpg" alt="" />
+                    <h2><asp:LinkButton ID="lnkNomeProduto" runat="server" Text='<%#Eval("Titulo") %>'></asp:LinkButton></h2>                    
+                    <h3>R$<asp:Label ID="lblPreco" Text='<%#Eval("Preco") %>' runat="server"></asp:Label>/mês</h3>
+                    <asp:LinkButton ID="btnAdicionar" runat="server" CssClass="carrinho" CommandName="Delete" />
+                    <asp:LinkButton ID="btnCancelar" runat="server" Text="Remover do carrinho" Visible="false" CommandName="Cancel" />                                        
+                </ItemTemplate>
+            </asp:DataList>
+            <h1>Jornais</h1>            
+            <asp:HiddenField ID="ProdutoID" runat="server" />
+            <asp:ModalPopupExtender ID="mpeViewProduto" runat="server" TargetControlID="ProdutoID" PopupControlID="pnlDados"
+                        BackgroundCssClass="modalBackground" DropShadow="true" CancelControlID="btnSair"
+                        DynamicServicePath="" Enabled="True">
+            </asp:ModalPopupExtender>
+            <asp:Panel ID="pnlDados" runat="server" CssClass="modalPopup"></asp:Panel>
+        </ContentTemplate>        
+    </asp:UpdatePanel>	    
 </asp:Content>

@@ -82,12 +82,12 @@ namespace Loja
             
             if(cdrNome.Text == "")
             {
-                erro = "O campo nome é obrigátio. \n";
+                erro = "O campo nome é obrigátio.";
             }
 
             if (cdrClienteSexo.Text == "")
             {
-                erro += "Por favor escolha o seu sexo. \n";                
+                erro += "Por favor escolha o seu sexo.";                
             }
 
 

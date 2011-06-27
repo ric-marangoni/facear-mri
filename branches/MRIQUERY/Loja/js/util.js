@@ -39,6 +39,18 @@ jQuery(document).ready(
 				});
 			});
 
+		});
+		
+		jQuery(function(){
+		    
+		    jQuery("*[rel=obrigatorio]").blur(function(){
+		        if(jQuery(this).val() == 0){
+		            jQuery(this).css('border-color', 'red');	            
+		        }else{
+		            jQuery(this).css('border-color', 'none');
+		        }
+		    });
+		    
 		});		
 	}
 );

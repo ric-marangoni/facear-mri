@@ -72,7 +72,7 @@ input[name="senha"] {
 
 #wrap {
 	text-align: left;
-	width: 900px;	
+	width: 940px;	
 	margin: 0 auto;		
 }
 
@@ -160,20 +160,27 @@ ul#menu li ul li a{float:none;}
 	text-decoration: none;
 }
 
-ul.produtos {
-	list-style: none;
-	margin: 15px 0;	
+#boxCestaCompras {
+    background: url("../../imagens/bgCestaCompras.png") no-repeat scroll 0 0 transparent;
+    height: 58px;
+    margin-bottom: 20px;
+    padding: 13px 0 13px 67px;
+    position: relative;
 }
 
-ul.produtos li {
-	display: block;
+table.produtos {
+	margin: 15px 0;
+	width: 100%;	
+}
+
+table.produtos tr {	
 	float: left;
 	text-align: center;
 	width: 150px;
 	margin: 25px 22px;
 }
 
-ul.produtos li a.carrinho{
+table.produtos td a.carrinho{
 	background: url("../../imagens/btAddCarrinho.png") no-repeat;
 	border: 0;
 	width: 150px;
@@ -181,20 +188,20 @@ ul.produtos li a.carrinho{
 	display: block;
 }
 
-ul.produtos li a.carrinho:hover{
+table.produtos td a.carrinho:hover{
 	opacity: 0.8;
 }
 
-ul.produtos li h2 {
+table.produtos td h2 {
 	height: 40px;
 	padding: 30px 0 10px;
 }
 
-ul.produtos li h2 a {
+table.produtos td h2 a {
 	color:#223C4F;	
 }
 
-ul.produtos li h2 a:hover {
+table.produtos td h2 a:hover {
 	color:#133984;
 	text-decoration: none;
 }
@@ -321,7 +328,7 @@ ul.menu-rodape li a:hover{
     height: 40px;
     letter-spacing: -0.02em;
     padding: 0 10px 0 0;
-    width: 162px;
+    width: 188px;
 }
 
 .busca #btEnviar {
@@ -353,14 +360,23 @@ ul.menu-rodape li a:hover{
     margin-left: 420px;	
 }
 
+.btn-checkout {
+	position: absolute;
+    right: 0;
+    top: 3px;
+    background: url("../../imagens/botao_compra.png") no-repeat center center;       
+    height: 53px;   
+    width: 119px;	
+}
+
 #box-principal {
 	width: 595px;
 	float: left;
-	margin-right: 10px;	
+	margin-right: 20px;	
 }
 
 #side-bar {
-	width: 295px;
+	width: 324px;
 	float: left;
 }
 
@@ -402,13 +418,6 @@ ul.menu-rodape li a:hover{
 		#banner-home .slide-prev a:hover {  
 			background: url(../../imagens/sprite-bt-painel.png) no-repeat -75px -73px;			
 		}
-
-#box-fies {
-	height: 243px;	
-	background: #FFF;	
-	border: 1px solid #E5E5E5;
-	border-top: 0;
-}
 
 .box-sidebar-bg {
 	background: url("../../imagens/bg_box.png") repeat-x scroll center bottom transparent;	
@@ -524,6 +533,21 @@ ul.menu-rodape li a:hover{
 .borda {
 	border: 1px solid #EFEFEF;
 	
+}
+
+.modalBackground {
+	background-color: Gray; 
+	filter: alpha(opacity=70); 
+	opacity: 0.7; 
+}
+
+.modalPopup {
+	width:auto; 
+	background-color: #FFFFFF; 
+	border-width: 3px; 
+	border-style: solid; 
+	border-color: Gray; 
+	padding: 15px 15px 15px 15px; 
 }
 		
 .tooltip{	
