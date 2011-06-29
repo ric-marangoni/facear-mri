@@ -101,6 +101,7 @@
     <Content Include="imagens\bt_enviar.gif" />
     <Content Include="imagens\icoFone.png" />
     <Content Include="imagens\icone_manual.png" />
+    <Content Include="imagens\ico_remove.png" />
     <Content Include="imagens\influx-logo.png" />
     <Content Include="imagens\java_banner.jpg" />
     <Content Include="imagens\jornais\newspaper-1.jpg" />

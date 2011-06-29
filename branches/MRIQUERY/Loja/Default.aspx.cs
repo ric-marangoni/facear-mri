@@ -62,8 +62,8 @@ namespace Loja
 
             lisProdutos.Add(produto);
 
-            Session["ListaProdutos"] = lisProdutos;
-
+            Session["ListaProdutos"] = lisProdutos;            
+            
             ((LinkButton)e.Item.FindControl("btnAdicionar")).Visible = false;
             ((LinkButton)e.Item.FindControl("btnCancelar")).Visible = true;
 
@@ -107,7 +107,12 @@ namespace Loja
 
             dtlProdutos.DataSource = listaProdutos;
             dtlProdutos.DataBind();            
-        }        
+        }
+
+        protected void lnkNomeProduto_Click(object sender, EventArgs e)
+        {
+            mpeViewProduto.Show();            
+        }
     }
     
 }

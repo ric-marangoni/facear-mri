@@ -42,7 +42,7 @@
                 DataKeyField="Id">
                 <ItemTemplate>
                     <img src="imagens/revistas/capa_info.jpg" alt="" />
-                    <h2><asp:LinkButton ID="lnkNomeProduto" runat="server" Text='<%#Eval("Titulo") %>'></asp:LinkButton></h2>                    
+                    <h2><asp:LinkButton ID="lnkNomeProduto" OnClick="lnkNomeProduto_Click" runat="server" Text='<%#Eval("Titulo") %>'></asp:LinkButton></h2>                    
                     <h3>R$<asp:Label ID="lblPreco" Text='<%#Eval("Preco") %>' runat="server"></asp:Label>/mês</h3>
                     <asp:LinkButton ID="btnAdicionar" runat="server" CssClass="carrinho" CommandName="Delete" />
                     <asp:LinkButton ID="btnCancelar" runat="server" Text="Remover do carrinho" Visible="false" CommandName="Cancel" />                                        
@@ -54,7 +54,10 @@
                         BackgroundCssClass="modalBackground" DropShadow="true" CancelControlID="btnSair"
                         DynamicServicePath="" Enabled="True">
             </asp:ModalPopupExtender>
-            <asp:Panel ID="pnlDados" runat="server" CssClass="modalPopup"></asp:Panel>
+            <asp:Panel ID="pnlDados" runat="server" CssClass="modalPopup">
+                <asp:ImageButton ImageUrl="~/imagens/ico_remove.png" ID="btnSair" Text="" runat="server" />
+                <div></div>
+            </asp:Panel>
         </ContentTemplate>        
     </asp:UpdatePanel>	    
 </asp:Content>
