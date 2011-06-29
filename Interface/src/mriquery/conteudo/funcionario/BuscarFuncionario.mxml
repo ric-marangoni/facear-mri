@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas 	xmlns:mx="http://www.adobe.com/2006/mxml" 
+			xmlns:thunderbolt="http://www.thunderbolt.com.br/2010/thunderBoltLib" 
+			width="100%"
+			height="100%" xmlns:date="componentes.date.*" xmlns:date1="mriquery.componentes.date.*" xmlns:mascaras="mriquery.componentes.mascaras.*">
+	
+	<mx:Script >
+		<![CDATA[
+			import mriquery.Util.Icones;
+			private function limparCampoBusca():void {
+				
+				txtNomeFuncionario.text = '';
+				txtcpf.text = '';
+				txtMatricula.text = '';
+			}
+		]]>
+	</mx:Script>
+	<mx:Canvas width="100%" height="100%">
+		<!-- titulo  -->
+		<mx:Label text="Nome :"  styleName="lblRotulos" left="29" top="30" color="#000000"/>
+		<mx:TextInput id="txtNomeFuncionario" left="102" top="26"  width="284"/>
+		<mx:Label text="CPF :" styleName="lbRotulos" x="40" y="58" color="#030303" height="20"/>
+		<mascaras:MaskedTextInput id="txtcpf" inputMask="###-###-###-##"  x="102" y="54" width="164"/>
+		<!-- data inicio  -->
+		<mx:Spacer width="20" />
+		
+		<!-- ativo -->
+		
+		<mx:Label text="Matrícula :"  styleName="lblRotulos" left="10" top="88" color="#020202"/>
+		<mx:TextInput id="txtMatricula" left="102" top="84"  width="164"/>
+		
+		<!-- botões  -->
+	
+		<mx:Canvas width="100%" bottom="0">
+			<mx:Button id="btnLimpar" label="Limpar"  bottom="8" right="89" click="limparCampoBusca()" />
+			<mx:Button id="btnBuscar" label="Buscar"  right="0" bottom="8" icon="{Icones.buscar}" />
+		</mx:Canvas>
+		
+	</mx:Canvas>
+	
+</mx:Canvas>	

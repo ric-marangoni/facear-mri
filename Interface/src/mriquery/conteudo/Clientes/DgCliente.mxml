@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%" creationComplete="init()" xmlns:itemRenderer="mriquery.componentes.itemRenderer.*">
+
+	<mx:Script>
+		<![CDATA[
+		
+			import mx.events.CollectionEvent;
+			import mx.collections.ArrayCollection;
+		
+			import mriquery.Util.Icones;
+			
+			
+			
+		    private function init():void{
+		   		 		
+		   }
+			
+			
+		]]>
+	</mx:Script>	
+	<mx:DataGrid width="100%" height="100%" 
+			 			  id="dgClientes"
+			 			  color="0x323232"
+						  rowCount="3"
+						  variableRowHeight="true"
+						  left="0"
+						  bottom="0"
+						  top="0"
+						  alternatingItemColors="[#FFFFFF, #FFFFFF]" 
+						  themeColor="#F69F23">
+			 	<mx:columns>
+			 		<mx:DataGridColumn width="70" headerText="ID" dataField="id"/>
+			 		<mx:DataGridColumn width="200" headerText="Nome" dataField="nome"/>
+			 		<mx:DataGridColumn headerText="Login" dataField="login"/>
+			 		<mx:DataGridColumn headerText="Status" dataField="status"/>
+			 		<mx:DataGridColumn headerText="Email" dataField="email"/>
+			 		<mx:DataGridColumn headerText="Telefone" dataField="telefone"/>
+			 		<mx:DataGridColumn headerText="Data De Cadastro" dataField="dataCadastro"/>
+			 		<mx:DataGridColumn width="70" headerText="Visualizar" >
+			 			<mx:itemRenderer>
+			 				<mx:Component>
+			 					<itemRenderer:verConteudoRenderer/>
+			 				</mx:Component>
+			 			</mx:itemRenderer>
+			 		</mx:DataGridColumn>
+			 		<mx:DataGridColumn width="50" headerText="Editar" >
+			 			<mx:itemRenderer>
+			 				<mx:Component>
+			 					<itemRenderer:editarRenderer/>
+			 				</mx:Component>
+			 			</mx:itemRenderer>
+			 		</mx:DataGridColumn>
+			 		<mx:DataGridColumn width="50" headerText="Editar" >
+			 			<mx:itemRenderer>
+			 				<mx:Component>
+			 					<itemRenderer:excluirRenderer/>
+			 				</mx:Component>
+			 			</mx:itemRenderer>
+			 		</mx:DataGridColumn>
+			 	</mx:columns>
+			 </mx:DataGrid>
+</mx:Canvas>

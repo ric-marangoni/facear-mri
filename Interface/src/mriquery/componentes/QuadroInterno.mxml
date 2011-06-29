@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas  xmlns:mx="http://www.adobe.com/2006/mxml"
+			left="30" 
+			right="30" 
+			top="25" 
+			width="100%"
+			creationComplete="changeZIndex()" >
+			
+			<mx:Script>
+				<![CDATA[
+					import mx.core.UIComponent;
+						
+						
+						// variáveis
+						
+						[Bindable]
+						public var rotulo:String
+						
+						[Bindable]
+						public var leftCanvasComponentes:Number = 55;
+						
+						[Bindable]
+						public var rightCanvasComponentes:Number = 55;
+						
+						// funções
+						
+						// altera o zindex do rotulo para a frente
+						// do canvas que tem a borda azul ( cnvBuscaAvisos )
+						
+						private function changeZIndex(): void {
+							
+							var newIndex:int = this.getChildIndex(hbRotulo) + 1;
+	
+							if( newIndex >= 0 && newIndex < this.numChildren ) {
+								this.setChildIndex(hbRotulo, newIndex );
+							}
+						}
+						
+						
+						public function addComponent(comp:UIComponent):void{
+							cnvComponentes.addChild(comp);
+						}
+						
+						  
+				]]>
+			</mx:Script>
+					
+			<mx:HBox 	id="hbRotulo" 
+						backgroundColor="#F9FBFC" 
+						borderStyle="solid" 
+						borderColor="#F5F7F9" left="{leftCanvasComponentes + 5 }" top="1">
+				
+				<mx:Label  	text="{rotulo}" 
+							left="35" 
+							top="2" 
+							color="#0E4B8A" 
+							fontSize="12" 
+							fontWeight="normal"  
+							alpha="1.0"/>
+			</mx:HBox>
+			
+					
+				
+			<mx:Canvas 	id="cnvComponentes" 
+						left="{leftCanvasComponentes}" 
+						right="{rightCanvasComponentes}" 
+						top="10" 
+						borderStyle="solid" 
+						borderColor="#5F69E3" 
+						bottom="10" 
+						borderThickness="1" 
+						backgroundAlpha="0.0">
+						<mx:HBox id="hbBoxButtons" bottom="5" right="10" horizontalAlign="right" left="10">
+						</mx:HBox>
+			</mx:Canvas>
+</mx:Canvas>
