@@ -1,8 +1,0 @@
-C:\Documents and Settings\Ricardo\Desktop\MRI\MRIQUERY\Negocio\App_Code\br.com.entidades\bin\Debug\br.com.entidades.dll
-C:\Documents and Settings\Ricardo\Desktop\MRI\MRIQUERY\Negocio\App_Code\br.com.entidades\bin\Debug\br.com.entidades.pdb
-C:\Documents and Settings\Ricardo\Desktop\MRI\MRIQUERY\Negocio\App_Code\br.com.entidades\bin\Debug\FluorineFx.dll
-C:\Documents and Settings\Ricardo\Desktop\MRI\MRIQUERY\Negocio\App_Code\br.com.entidades\bin\Debug\antlr.runtime.dll
-C:\Documents and Settings\Ricardo\Desktop\MRI\MRIQUERY\Negocio\App_Code\br.com.entidades\bin\Debug\log4net.dll
-C:\Documents and Settings\Ricardo\Desktop\MRI\MRIQUERY\Negocio\App_Code\br.com.entidades\obj\Debug\ResolveAssemblyReference.cache
-C:\Documents and Settings\Ricardo\Desktop\MRI\MRIQUERY\Negocio\App_Code\br.com.entidades\obj\Debug\br.com.entidades.dll
-C:\Documents and Settings\Ricardo\Desktop\MRI\MRIQUERY\Negocio\App_Code\br.com.entidades\obj\Debug\br.com.entidades.pdb
