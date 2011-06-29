@@ -35,3 +35,12 @@ C:\Documents and Settings\Ricardo\Desktop\MRI\MRIQUERY\Loja\bin\ru\AjaxControlTo
 C:\Documents and Settings\Ricardo\Desktop\MRI\MRIQUERY\Loja\bin\tr-TR\AjaxControlToolkit.resources.dll
 C:\Documents and Settings\Ricardo\Desktop\MRI\MRIQUERY\Loja\bin\zh-CHS\AjaxControlToolkit.resources.dll
 C:\Documents and Settings\Ricardo\Desktop\MRI\MRIQUERY\Loja\bin\zh-CHT\AjaxControlToolkit.resources.dll
+C:\Users\Irineu\Desktop\facear-mri\branches\MRIQUERY\Loja\bin\br.com.entidades.dll
+C:\Users\Irineu\Desktop\facear-mri\branches\MRIQUERY\Loja\bin\br.com.servicos.dll
+C:\Users\Irineu\Desktop\facear-mri\branches\MRIQUERY\Loja\bin\br.com.dao.dll
+C:\Users\Irineu\Desktop\facear-mri\branches\MRIQUERY\Loja\bin\log4net.dll
+C:\Users\Irineu\Desktop\facear-mri\branches\MRIQUERY\Loja\bin\FluorineFx.dll
+C:\Users\Irineu\Desktop\facear-mri\branches\MRIQUERY\Loja\bin\antlr.runtime.dll
+C:\Users\Irineu\Desktop\facear-mri\branches\MRIQUERY\Loja\bin\br.com.dao.pdb
+C:\Users\Irineu\Desktop\facear-mri\branches\MRIQUERY\Loja\bin\br.com.entidades.pdb
+C:\Users\Irineu\Desktop\facear-mri\branches\MRIQUERY\Loja\bin\br.com.servicos.pdb

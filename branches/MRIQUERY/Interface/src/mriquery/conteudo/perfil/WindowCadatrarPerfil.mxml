@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:TitleWindow xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" width="400" height="190" styleName="panelContexto" 
+				title="Adicionar Um Novo Perfl"
+				close="closePoup()" showCloseButton="true">
+	<mx:Script>
+		<![CDATA[
+			import mx.core.Application;
+			import mriquery.events.EventsMryQuery;
+			import mx.rpc.events.FaultEvent;
+			import mx.controls.Alert;
+			import mx.rpc.events.ResultEvent;
+			import mriquery.actionScript.entidades.Perfil;
+			import mx.managers.PopUpManager;
+			
+			[Bindable]
+			private var perfil:Perfil = new Perfil();
+			
+			private function salvarPerfil():void{
+				
+				perfil = new Perfil();
+				
+				perfil.perfil = txtPerfil.text;
+				roSalvarPerfil.salvarPerfil(perfil);
+			}
+			
+			private function salvarPerfilResult(event:ResultEvent):void{
+				
+				if(event.result == true){
+					
+					Alert.show("Novo Perfil Cadastrado com Sucesso..","Informativo");
+					closePoup();
+				}else{
+					
+					Alert.show("Erro ao Adicionar Novo Perfil","Informativo");
+				}
+			}
+			
+			private function salvarPerfilFault(event:FaultEvent):void{
+				
+				Alert.show("Erro Sistema indisponivel..","Informativo");
+			}
+			
+			
+			private function closePoup():void {
+				
+				//evento enviado dgPerfil
+				dispatchEvent(new EventsMryQuery(EventsMryQuery.ATUALIZAR_DG_PERFIL));
+				PopUpManager.removePopUp(this);
+			}
+		]]>
+	</mx:Script>
+	<mx:RemoteObject id="roSalvarPerfil" destination="fluorine" source="br.com.servicos.ServicoPerfil"  
+					showBusyCursor="true" result="salvarPerfilResult(event)" fault="salvarPerfilFault(event)"/>
+	<mx:Canvas width="100%" height="100%">
+		<mx:FormItem label="Perfil" x="10" y="53" color="#020202" width="322.5">
+			<mx:TextInput id="txtPerfil" width="287"/>
+		</mx:FormItem>
+		<mx:Button label="Salvar" x="287" y="91" click="salvarPerfil()"/>
+	</mx:Canvas>
+	<mx:ControlBar/>
+</mx:TitleWindow>
