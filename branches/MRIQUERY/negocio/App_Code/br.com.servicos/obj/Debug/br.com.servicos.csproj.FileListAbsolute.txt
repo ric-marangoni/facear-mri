@@ -1,0 +1,13 @@
+C:\Documents and Settings\Ricardo\Desktop\MRI\MRIQUERY\Negocio\App_Code\br.com.servicos\bin\Debug\br.com.servicos.dll
+C:\Documents and Settings\Ricardo\Desktop\MRI\MRIQUERY\Negocio\App_Code\br.com.servicos\bin\Debug\br.com.servicos.pdb
+C:\Documents and Settings\Ricardo\Desktop\MRI\MRIQUERY\Negocio\App_Code\br.com.servicos\bin\Debug\br.com.dao.dll
+C:\Documents and Settings\Ricardo\Desktop\MRI\MRIQUERY\Negocio\App_Code\br.com.servicos\bin\Debug\br.com.entidades.dll
+C:\Documents and Settings\Ricardo\Desktop\MRI\MRIQUERY\Negocio\App_Code\br.com.servicos\bin\Debug\FluorineFx.dll
+C:\Documents and Settings\Ricardo\Desktop\MRI\MRIQUERY\Negocio\App_Code\br.com.servicos\bin\Debug\log4net.dll
+C:\Documents and Settings\Ricardo\Desktop\MRI\MRIQUERY\Negocio\App_Code\br.com.servicos\bin\Debug\MySql.Data.dll
+C:\Documents and Settings\Ricardo\Desktop\MRI\MRIQUERY\Negocio\App_Code\br.com.servicos\bin\Debug\antlr.runtime.dll
+C:\Documents and Settings\Ricardo\Desktop\MRI\MRIQUERY\Negocio\App_Code\br.com.servicos\bin\Debug\br.com.dao.pdb
+C:\Documents and Settings\Ricardo\Desktop\MRI\MRIQUERY\Negocio\App_Code\br.com.servicos\bin\Debug\br.com.entidades.pdb
+C:\Documents and Settings\Ricardo\Desktop\MRI\MRIQUERY\Negocio\App_Code\br.com.servicos\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Ricardo\Desktop\MRI\MRIQUERY\Negocio\App_Code\br.com.servicos\obj\Debug\br.com.servicos.dll
+C:\Documents and Settings\Ricardo\Desktop\MRI\MRIQUERY\Negocio\App_Code\br.com.servicos\obj\Debug\br.com.servicos.pdb
