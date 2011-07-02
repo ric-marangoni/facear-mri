@@ -12,6 +12,7 @@
 	    <link href="css/ie6.css" rel="stylesheet" type="text/css" />
     <![endif]-->
     <script type="text/javascript" src="js/jQuery.js"></script>
+    <script src="js/jquery.maskedinput.js" type="text/javascript"></script>
     <script type="text/javascript" src="js/jquery.cycle.js"></script>
     <script type="text/javascript" src="js/util.js" ></script>    
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -21,7 +22,7 @@
     <form id="Loja" runat="server">
     <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server"></asp:ToolkitScriptManager>    
     <div id="wrap">
-		<div id="topo">
+		<div id="topo">		    
 			<ul id="menu">				
 				<li><a href="#">Fale com a Leia+</a></li>
 				<li><a href="#">Trabalhe na Leia+</a></li>
@@ -30,6 +31,9 @@
 				<li><a href="#">A Leia+</a></li>
 				<li><a href="Default.aspx">Home</a></li>
 			</ul>
+			<div class="logo">
+			    <img src="imagens/logo-leia-mais.jpg" alt="um hábito para a sua vida!" />
+			</div>
 			<div class="clear"><!-- --></div>
 		</div>
     
@@ -85,6 +89,18 @@
 			        </div>
 			    </ContentTemplate>
 			 </asp:UpdatePanel>
+			 
+			 <div class="box-sidebar-bg">
+			    <h2>Formas de Pagamento</h2>
+			    <div class="formas-pagamento">
+			        <img src="imagens/bg_formas_pagamento.png" alt="Formas de Pagamento" />
+			    </div>
+			 </div>
+			 
+			 <div class="box-redes-sociais">
+			    <img src="imagens/icoRedesSociais.png" alt="" />
+			 </div>
+			 
 		</div>
 		
 		<div class="clear"><!-- PARA LIMPAR O FLOAT --></div>
