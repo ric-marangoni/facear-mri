@@ -41,7 +41,7 @@
             <asp:DataList ID="dtlProdutos" CssClass="produtos" runat="server" OnCancelCommand="dtlProdutos_CancelCommand" OnDeleteCommand="dtlProdutos_DeleteCommand"
                 DataKeyField="Id">
                 <ItemTemplate>
-                    <img src="imagens/revistas/capa_info.jpg" alt="" />
+                    <img src="imagens/revistas/capa_boaforma.jpg" alt="" />
                     <h2><asp:LinkButton ID="lnkNomeProduto" runat="server" Text='<%#Eval("Titulo") %>'></asp:LinkButton></h2>                    
                     <h3>R$<asp:Label ID="lblPreco" Text='<%#Eval("Preco") %>' runat="server"></asp:Label>/mês</h3>
                     <asp:LinkButton ID="btnAdicionar" runat="server" CssClass="carrinho" CommandName="Delete" />

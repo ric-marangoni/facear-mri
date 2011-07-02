@@ -66,13 +66,13 @@ namespace Loja
             {
                 msgDisponibilidade.Visible = true;
                 msgDisponibilidade.CssClass = "msg_erro";
-                msgDisponibilidade.Text = "Este login está indisponível";
+                msgDisponibilidade.Text = cdrClienteLogin.Text + " não está disponível";
             }
             else
             {
                 msgDisponibilidade.Visible = true;
                 msgDisponibilidade.CssClass = "msg_sucesso";
-                msgDisponibilidade.Text = "Este login está disponível";
+                msgDisponibilidade.Text = cdrClienteLogin.Text + " está disponível";
             }
         }
 

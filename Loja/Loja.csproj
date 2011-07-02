@@ -102,7 +102,9 @@
     <Content Include="imagens\banner_virtuemart.jpg" />
     <Content Include="imagens\bg-car.jpg" />
     <Content Include="imagens\bg-shadow.jpg" />
+    <Content Include="imagens\bgRedesSociais.png" />
     <Content Include="imagens\bg_box.png" />
+    <Content Include="imagens\bg_formas_pagamento.png" />
     <Content Include="imagens\btAddCarrinho.png" />
     <Content Include="imagens\btn-entrar.gif" />
     <Content Include="imagens\bt_continuar_comprando.png" />
@@ -111,11 +113,13 @@
     <Content Include="imagens\bt_prosseguir.png" />
     <Content Include="imagens\icoFone.png" />
     <Content Include="imagens\icone_manual.png" />
+    <Content Include="imagens\icoRedesSociais.png" />
     <Content Include="imagens\ico_remove.png" />
     <Content Include="imagens\influx-logo.png" />
     <Content Include="imagens\java_banner.jpg" />
     <Content Include="imagens\jornais\newspaper-1.jpg" />
     <Content Include="imagens\loading.gif" />
+    <Content Include="imagens\logo-leia-mais.jpg" />
     <Content Include="imagens\marcador.png" />
     <Content Include="imagens\revistas\capa_arquitetura.jpg" />
     <Content Include="imagens\revistas\capa_boaforma.jpg" />

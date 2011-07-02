@@ -52,12 +52,21 @@ jQuery(document).ready(
 		jQuery(function(){
 		    
 		    jQuery("*[rel=obrigatorio]").blur(function(){
-		        if(jQuery(this).val() == 0){
-		            jQuery(this).css('border-color', 'red');	            
+		        if(jQuery(this).val() == 0 || jQuery(this).val() == "__/__/____" || jQuery(this).val() == "___.___.___-__" || jQuery(this).val() == "__.___-___"){
+		            jQuery(this).css('border-color', '#B72E00');	            
 		        }else{
-		            jQuery(this).css('border-color', 'none');
+		            jQuery(this).css('border-color', '#999');
 		        }
 		    });
+		    
+		    jQuery("#ctl00_ContentPlaceHolder1_cdrDataNascimento").mask("99/99/9999",{placeholder: "_"});
+		    jQuery("#ctl00_ContentPlaceHolder1_cdrCpf").mask("999.999.999-99",{placeholder: "_"});
+		    jQuery("#ctl00_ContentPlaceHolder1_cdrTelResidencial").mask("(99)9999-9999",{placeholder: "_"});
+		    jQuery("#ctl00_ContentPlaceHolder1_cdrTelCelular").mask("(99)9999-9999",{placeholder: "_"});
+		    jQuery("#ctl00_ContentPlaceHolder1_cdrTelComercial").mask("(99)9999-9999",{placeholder: "_"});
+		    jQuery("#ctl00_ContentPlaceHolder1_cdrCep").mask("99.999-999",{placeholder: "_"});
+		    jQuery("#ctl00_ContentPlaceHolder1_cdrAlternativoCep").mask("99.999-999",{placeholder: "_"});
+
 		    
 		});		
 	}

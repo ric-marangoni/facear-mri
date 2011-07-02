@@ -63,14 +63,12 @@ namespace Loja
             lisProdutos.Add(produto);
 
             Session["ListaProdutos"] = lisProdutos;
-
-            string scriptString = "<script type=\"text/javascript\">" +
-                                  "     var carrinho = document.getElementById('ctl00_cart_info');" +
-                                  "     carrinho.innerHtml = '<small>Você tem <strong>"+lisProdutos.Count+"</strong></small>';" +
-                                  "</script>";
+                        
+            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "addCar",
+                "var carrinho = document.getElementById('ctl00_cart_info');" +
+                "carrinho.innerHtml = '<small>Você tem <strong>" + lisProdutos.Count + "</strong></small>';"         
+            , true);
             
-            Page.ClientScript.RegisterClientScriptBlock(Page.GetType(), "scrt", scriptString, true);
-
             ((LinkButton)e.Item.FindControl("btnAdicionar")).Visible = false;
             ((LinkButton)e.Item.FindControl("btnCancelar")).Visible = true;
 

@@ -8,11 +8,11 @@
          <fieldset>           
              <label>
 		        <span>Nome</span>		    
-		        <asp:TextBox runat="server" ID="cdrNome" rel="obrigatorio" CssClass="grande"></asp:TextBox>		     
+		        <asp:TextBox runat="server" ID="cdrNome" CssClass="grande" rel="obrigatorio"></asp:TextBox>		     
 	        </label>
 	        <label class="float-left">
 		        <span>Sexo</span>
-		        <asp:DropDownList runat="server" ID="cdrClienteSexo">
+		        <asp:DropDownList runat="server" ID="cdrClienteSexo" rel="obrigatorio">
 		            <asp:ListItem Value="">Selecione</asp:ListItem>
 		            <asp:ListItem Value="masculino">Masculino</asp:ListItem>
 		            <asp:ListItem Value="feminino">Feminino</asp:ListItem>
@@ -20,16 +20,16 @@
 	        </label>
 	        <label class="float-left">
 		        <span>Data de Nascimento</span>		     
-		        <asp:TextBox runat="server" ID="cdrDataNascimento"></asp:TextBox>		    
+		        <asp:TextBox runat="server" ID="cdrDataNascimento" rel="obrigatorio"></asp:TextBox>		    
 	        </label>
 	        <label class="float-left">
 		        <span>CPF</span>		    
-		        <asp:TextBox runat="server" ID="cdrCpf"></asp:TextBox>		     
+		        <asp:TextBox runat="server" ID="cdrCpf" rel="obrigatorio"></asp:TextBox>		     
 	        </label>	    
 	        <div class="clear"><!--  --></div>
             <label class="float-left">
 		        <span id="lblLogin" runat="server">Login</span>		                		    
-		        <asp:TextBox runat="server" ID="cdrClienteLogin" CssClass="medio"></asp:TextBox>		     
+		        <asp:TextBox runat="server" ID="cdrClienteLogin" CssClass="medio" rel="obrigatorio"></asp:TextBox>		     
 	        </label>
 	        <br />
 	        <asp:Button runat="server" ID="verificarDisponibilidade" CssClass="btnVerificar" Text="Verificar disponibilidade" OnClick="verificarDisponibilidade_Click" />
@@ -38,11 +38,11 @@
 	        <div class="clear"><!--  --></div>	        
 	        <label class="float-left">
 		        <span id="lblSenha" runat="server">Senha</span>		    
-		        <asp:TextBox TextMode="Password" runat="server" ID="cdrSenha"></asp:TextBox>		      
+		        <asp:TextBox TextMode="Password" runat="server" ID="cdrSenha" rel="obrigatorio"></asp:TextBox>		      
 	        </label>
 	        <label>
-		        <span id="lblConfirmaSenha" runat="server">Confirme</span>		     
-		        <asp:TextBox TextMode="Password" runat="server" ID="cdrConfirmaSenha"></asp:TextBox>
+		        <span id="lblConfirmaSenha" runat="server" >Confirme</span>		     
+		        <asp:TextBox TextMode="Password" runat="server" ID="cdrConfirmaSenha" rel="obrigatorio"></asp:TextBox>
 	        </label>
 	        <div class="clear"></div>
 	    </fieldset>
@@ -50,7 +50,7 @@
 	    <fieldset>            
 	        <label>
 		        <span>E-mail Pessoal</span>		     
-		        <asp:TextBox runat="server" ID="cdrEmailPessoal" CssClass="grande"></asp:TextBox>
+		        <asp:TextBox runat="server" ID="cdrEmailPessoal" CssClass="grande" rel="obrigatorio"></asp:TextBox>
 	        </label>
 	        <label>
 		        <span>Email Comercial</span>		    
@@ -74,28 +74,28 @@
 	    <fieldset>	        
 	        <label>
 		        <span>CEP</span>		    
-		        <asp:TextBox runat="server" ID="cdrCep"></asp:TextBox>
+		        <asp:TextBox runat="server" ID="cdrCep" rel="obrigatorio"></asp:TextBox>
 	        </label>
 	        <label class="float-left">
 		        <span>Cidade</span>		    
-		        <asp:TextBox runat="server" ID="cdrCidade" CssClass="medio"></asp:TextBox>
+		        <asp:TextBox runat="server" ID="cdrCidade" CssClass="medio" rel="obrigatorio"></asp:TextBox>
 	        </label>
 	        <label>
 		        <span>Estado</span>		    
-		        <asp:TextBox runat="server" ID="cdrEstado"></asp:TextBox>
+		        <asp:TextBox runat="server" ID="cdrEstado" rel="obrigatorio"></asp:TextBox>
 	        </label>
 	        <div class="clear"><!--  --></div>
 	        <label class="float-left">
 		        <span>Logradouro</span>		    
-		        <asp:TextBox runat="server" ID="cdrLogradouro" CssClass="medio"></asp:TextBox>
+		        <asp:TextBox runat="server" ID="cdrLogradouro" CssClass="medio" rel="obrigatorio"></asp:TextBox>
 	        </label>
 	        <label>
 		        <span>Numero</span>		    
-		        <asp:TextBox runat="server" ID="cdrNumero"></asp:TextBox>
+		        <asp:TextBox runat="server" ID="cdrNumero" rel="obrigatorio"></asp:TextBox>
 	        </label>
 	        <label class="float-left">
 		        <span>Bairro</span>		    
-		        <asp:TextBox runat="server" ID="cdrBairro" CssClass="medio"></asp:TextBox>
+		        <asp:TextBox runat="server" ID="cdrBairro" CssClass="medio" rel="obrigatorio"></asp:TextBox>
 	        </label>
 	        <label>
 		        <span>Complemento</span>		    
