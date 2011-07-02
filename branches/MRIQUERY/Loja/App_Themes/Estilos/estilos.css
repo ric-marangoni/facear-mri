@@ -20,6 +20,14 @@ h1 {
 	border-bottom: 1px solid #EFEFEF;
 }
 
+h1.titulo-paginas {
+	border-bottom: 3px solid #457AA2;
+    color: #457AA2;
+    font-size: 30px;
+    margin-bottom: 20px;
+    padding-bottom: 0;
+}
+
 h3 {
 	font: 16px Arial, Verdana, Tahoma;
 	font-weight: bold;
@@ -188,9 +196,22 @@ table.produtos td a.carrinho{
 	display: block;
 }
 
+table.produtos td a.removerCarrinho{
+	background: url("../../imagens/btRemoverCarrinho.png") no-repeat;
+	border: 0;
+	width: 150px;
+	height: 29px;
+	display: block;
+}
+
 table.produtos td a.carrinho:hover{
 	opacity: 0.8;
 }
+
+table.produtos td a.removerCarrinho:hover{
+	opacity: 0.8;
+}
+	
 
 table.produtos td h2 {
 	height: 40px;
@@ -348,6 +369,44 @@ ul.menu-rodape li a:hover{
     width: 50px;
 	border: 1px solid #999;
 	border-left: 0;
+}
+
+.lista-carrinho {
+    border: 1px solid #CCCCCC;
+    color: #666666;
+    font-weight: normal;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.lista-carrinho .carrinho-total {
+    background: none repeat scroll 0 0 #DDDDDD;
+    color: #666666;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px;
+    text-align: right;
+}
+
+.carrinho-total span {color: #0080D3;}
+
+.lista-carrinho table {
+	width: 100%;
+	border: 0;
+}
+
+.lista-carrinho th {
+	background: none repeat scroll 0 0 #F4F4F4;
+    border-bottom: 1px solid #CCCCCC;
+    padding: 5px 10px;
+}
+
+.lista-carrinho td {
+	border-bottom: 1px solid #CCCCCC;
+	padding: 10px;	
+}
+
+.round {
+    border-radius: 5px 5px 5px 5px;
 }
 
 .btn-enviar {
@@ -568,6 +627,11 @@ ul.menu-rodape li a:hover{
 	padding: 5px 20px 4px 0;
 	float: left;
 	margin-right: 20px;
+}
+
+.alinha-direita {
+	text-align: right;
+	margin-top: 15px;
 }
 
 .copy-right {

@@ -61,6 +61,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Checkout.aspx.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Checkout.aspx.designer.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+    </Compile>
     <Compile Include="utils\Alert.cs" />
     <Compile Include="Cadastro_cliente.aspx.cs">
       <DependentUpon>Cadastro_cliente.aspx</DependentUpon>
@@ -90,22 +97,25 @@
     <Content Include="App_Themes\Estilos\ie6.css" />
     <Content Include="App_Themes\Estilos\iepngfix.htc" />
     <Content Include="Cadastro_cliente.aspx" />
+    <Content Include="Checkout.aspx" />
     <Content Include="imagens\banner_prestashop.jpg" />
     <Content Include="imagens\banner_virtuemart.jpg" />
     <Content Include="imagens\bg-car.jpg" />
     <Content Include="imagens\bg-shadow.jpg" />
-    <Content Include="imagens\bg_body.jpg" />
     <Content Include="imagens\bg_box.png" />
     <Content Include="imagens\btAddCarrinho.png" />
     <Content Include="imagens\btn-entrar.gif" />
+    <Content Include="imagens\bt_continuar_comprando.png" />
     <Content Include="imagens\bt_enviar.gif" />
+    <Content Include="imagens\bt_limpar_carrinho.png" />
+    <Content Include="imagens\bt_prosseguir.png" />
     <Content Include="imagens\icoFone.png" />
     <Content Include="imagens\icone_manual.png" />
+    <Content Include="imagens\ico_remove.png" />
     <Content Include="imagens\influx-logo.png" />
     <Content Include="imagens\java_banner.jpg" />
     <Content Include="imagens\jornais\newspaper-1.jpg" />
     <Content Include="imagens\loading.gif" />
-    <Content Include="imagens\logo-twitter.png" />
     <Content Include="imagens\marcador.png" />
     <Content Include="imagens\revistas\capa_arquitetura.jpg" />
     <Content Include="imagens\revistas\capa_boaforma.jpg" />
@@ -129,14 +139,10 @@
     <Content Include="imagens\revistas\capa_veja.jpg" />
     <Content Include="imagens\revistas\capa_viagem.jpg" />
     <Content Include="imagens\revistas\capa_womenshealth.jpg" />
-    <Content Include="imagens\rootTAHeaderLeft.png" />
-    <Content Include="imagens\rootTAHeaderMiddle.png" />
     <Content Include="imagens\selo_certisign.gif" />
     <Content Include="imagens\seta.gif" />
     <Content Include="imagens\sprite-bt-painel.png" />
     <Content Include="imagens\sprite-busca.png" />
-    <Content Include="imagens\thumb.jpg" />
-    <Content Include="imagens\thumb2.jpg" />
     <Content Include="imagens\webdesign_banner.png" />
     <Content Include="img\blank.gif" />
     <Content Include="js\jquery.cycle.js" />
@@ -209,9 +215,9 @@
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
-          <AutoAssignPort>False</AutoAssignPort>
+          <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>52491</DevelopmentServerPort>
-          <DevelopmentServerVPath>/loja</DevelopmentServerVPath>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

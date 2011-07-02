@@ -1,6 +1,18 @@
 jQuery(document).ready(
 	function(){		
 	    
+	    var er = new RegExp("Checkout.aspx");
+	    
+	    if(er.test(window.location)){
+	        jQuery('#side-bar').hide();
+	        jQuery('#box-principal').css('width', '100%');
+	        jQuery('.lista-carrinho table').attr('rules', '');;
+	    }
+	    
+	    var carrinho = document.getElementById('ctl00_cart_info');
+        carrinho.innerHtml = '<small>Você tem <strong>50</strong></small>';
+	   
+	    	
 		var tamanhoMenu = jQuery('#menu li').length;
 		jQuery('#menu li a').eq(0).css('border', 'none');			
 
@@ -14,11 +26,7 @@ jQuery(document).ready(
 				prev : '.slide-prev',
 				next : '.slide-next'	
 			});
-		}
-
-		jQuery('#link-fies').click(function(){
-			window.open("http://www1.caixa.gov.br/popup/home/popup_home_4.asp", "mywindow", "menubar=1, width=750, height=600");
-		});
+		}	
 
 		jQuery(function(){
    
