@@ -8,18 +8,6 @@ CREATE TABLE TB_PERFIL(
 	primary key(ID_PERFIL)
 );
 
-CREATE TABLE TB_FUNCIONARIO(
-	ID_FUNCIONARIO int not null auto_increment,
-	DATA_ADMISSAO date not null,
-	DATA_DEMISSAO date,
-	PERFIL int not null,
-	USUARIO int not null,
-	SETOR VARCHAR(100) NOT NULL,
-	primary key(ID_FUNCIONARIO),
-	foreign key(USUARIO) references TB_USUARIO(ID_USUARIO),
-	foreign key(PERFIL) references TB_PERFIL(ID_PERFIL)
-);
-
 
 CREATE TABLE TB_ENDERECO(
 	ID_ENDERECO int not null auto_increment,
@@ -33,13 +21,6 @@ CREATE TABLE TB_ENDERECO(
 	primary key(ID_ENDERECO)
 );
 
-CREATE TABLE TB_EDITORA(
-	ID_EDITORA int not null auto_increment,
-	EDITORA int not null,
-	primary key(ID_EDITORA),
-	foreign key(EDITORA) references TB_USUARIO(ID_USUARIO)
-);
-
 CREATE TABLE TB_USUARIO(
 	ID_USUARIO int not null auto_increment,
 	NOME varchar(100) not null,
@@ -50,16 +31,35 @@ CREATE TABLE TB_USUARIO(
 	ENDERECO_ALTERNATIVO int null,
 	EMAIL_PESSOAL varchar(100),
 	EMAIL_COMERCIAL varchar(100),
-	TELEFONE_CELULAR long,
-	TELEFONE_RESIDENCIAL long,
-	TELEFONE_COMERCIAL long,
+	TELEFONE_CELULAR varchar(30),
+	TELEFONE_RESIDENCIAL varchar(30),
+	TELEFONE_COMERCIAL varchar(30),
 	DATA_CADASTRO date,
 	SEXO varchar(10) not null,
-	CPF_CNPJ long,
+	CPF_CNPJ varchar(30),
 	STATUS varChar(50),
 	primary key(ID_USUARIO),
 	foreign key(ENDERECO) references TB_ENDERECO(ID_ENDERECO),
 	foreign key(ENDERECO_ALTERNATIVO) references TB_ENDERECO(ID_ENDERECO)
+);
+
+CREATE TABLE TB_EDITORA(
+	ID_EDITORA int not null auto_increment,
+	EDITORA int not null,
+	primary key(ID_EDITORA),
+	foreign key(EDITORA) references TB_USUARIO(ID_USUARIO)
+);
+
+CREATE TABLE TB_FUNCIONARIO(
+	ID_FUNCIONARIO int not null auto_increment,
+	DATA_ADMISSAO date not null,
+	DATA_DEMISSAO date,
+	PERFIL int not null,
+	USUARIO int not null,
+	SETOR VARCHAR(100) NOT NULL,
+	primary key(ID_FUNCIONARIO),
+	foreign key(USUARIO) references TB_USUARIO(ID_USUARIO),
+	foreign key(PERFIL) references TB_PERFIL(ID_PERFIL)
 );
 
 CREATE TABLE TB_FORMA_PAGAMENTO(
@@ -82,7 +82,7 @@ CREATE TABLE TB_PLANO(
 	PLANO varchar(100),
 	DESCRICAO varchar(200),
 	PRECO double,
-	VIGENCIA not null int,
+	VIGENCIA int not null,
 	primary key(ID_PLANO)
 );
 
