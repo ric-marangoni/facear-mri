@@ -45,7 +45,7 @@
                     <h2><asp:LinkButton ID="lnkNomeProduto" runat="server" Text='<%#Eval("Titulo") %>'></asp:LinkButton></h2>                    
                     <h3>R$<asp:Label ID="lblPreco" Text='<%#Eval("Preco") %>' runat="server"></asp:Label>/mês</h3>
                     <asp:LinkButton ID="btnAdicionar" runat="server" CssClass="carrinho" CommandName="Delete" />
-                    <asp:LinkButton ID="btnCancelar" runat="server" Text="Remover do carrinho" Visible="false" CommandName="Cancel" />                                        
+                    <asp:LinkButton ID="btnCancelar" runat="server"  CssClass="removerCarrinho" Visible="false" CommandName="Cancel" />                                        
                 </ItemTemplate>
             </asp:DataList>
             <h1>Jornais</h1>            
@@ -54,7 +54,9 @@
                         BackgroundCssClass="modalBackground" DropShadow="true" CancelControlID="btnSair"
                         DynamicServicePath="" Enabled="True">
             </asp:ModalPopupExtender>
-            <asp:Panel ID="pnlDados" runat="server" CssClass="modalPopup"></asp:Panel>
+            <asp:Panel ID="pnlDados" runat="server" CssClass="modalPopup">
+                <asp:ImageButton ImageUrl="~/imagens/loading.gif" ID="btnSair" runat="server" />
+            </asp:Panel>
         </ContentTemplate>        
     </asp:UpdatePanel>	    
 </asp:Content>

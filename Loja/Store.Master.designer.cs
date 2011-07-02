@@ -32,13 +32,13 @@ namespace Loja {
         protected global::System.Web.UI.HtmlControls.HtmlForm Loja;
         
         /// <summary>
-        /// ScriptLoja control.
+        /// ToolkitScriptManager1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.ScriptManager ScriptLoja;
+        protected global::AjaxControlToolkit.ToolkitScriptManager ToolkitScriptManager1;
         
         /// <summary>
         /// ContentPlaceHolder1 control.

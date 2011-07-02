@@ -1,5 +1,7 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Store.master.cs" Inherits="Loja.Store" %>
 
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
@@ -17,7 +19,7 @@
 </head>
 <body>
     <form id="Loja" runat="server">
-    <asp:ScriptManager ID="ScriptLoja" runat="server"></asp:ScriptManager>
+    <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server"></asp:ToolkitScriptManager>    
     <div id="wrap">
 		<div id="topo">
 			<ul id="menu">				
@@ -79,7 +81,7 @@
 			        <div id="boxCestaCompras">
 			            <h4>Cesta de compras</h4>
                         <p id="cart_info" runat="server">Você não tem itens em sua cesta.</p>                        
-                        <asp:LinkButton CssClass="btn-checkout" ID="lnkCheckout" PostBackUrl="#" Visible="false" runat="server"></asp:LinkButton>
+                        <asp:LinkButton CssClass="btn-checkout" ID="lnkCheckout" PostBackUrl="/Checkout.aspx" Visible="false" runat="server"></asp:LinkButton>
 			        </div>
 			    </ContentTemplate>
 			 </asp:UpdatePanel>

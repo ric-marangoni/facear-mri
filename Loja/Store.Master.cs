@@ -36,28 +36,27 @@ namespace Loja
                 userName.Text =  cliente.PessoaFisica.Nome;
             }
 
-            if ((List<Produto>)Session["ListaProdutos"] != null)
-            {                
-                var listaProdutos = (List<Produto>)Session["ListaProdutos"];
-
-                var pluralProduto = " item";
-
-                if (listaProdutos.Count > 1)
+            if (!IsPostBack)
+            {
+                if ((List<Produto>)Session["ListaProdutos"] != null)
                 {
-                    pluralProduto = " itens";
-                }
+                    var listaProdutos = (List<Produto>)Session["ListaProdutos"];
 
-                if (listaProdutos.Count > 0)
-                {
-                    cart_info.InnerHtml = "<small style=\"font-size:11px\">Você tem " + "<strong style=\"color: #006699;\">" + listaProdutos.Count + "</strong>" + pluralProduto + " na cesta</small>    ";                    
-                    lnkCheckout.Visible = true;                    
+                    var pluralProduto = " item";
 
+                    if (listaProdutos.Count > 1)
+                    {
+                        pluralProduto = " itens";
+                    }
+
+                    if (listaProdutos.Count > 0)
+                    {
+                        cart_info.InnerHtml = "<small style=\"font-size:11px\">Você tem " + "<strong style=\"color: #006699;\">" + listaProdutos.Count + "</strong>" + pluralProduto + " na cesta</small>    ";
+                        lnkCheckout.Visible = true;
+
+                    }                    
                 }
-                else
-                {
-                    cart_info.InnerText = "Você não tem itens em sua cesta.";                    
-                }
-            }            
+            }
         }
 
         protected void btnEntrar_Click(object sender, EventArgs e)
