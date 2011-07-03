@@ -3,7 +3,7 @@ use  projeto_integrador_mriquery;
 
 CREATE TABLE TB_PERFIL(
 	ID_PERFIL int not null auto_increment,
-	PERFIL varchar(50) not null,
+	NOME_PERFIL varchar(50) not null,
 	DESCRICAO varchar(100), 
 	primary key(ID_PERFIL)
 );
