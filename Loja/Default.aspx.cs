@@ -63,6 +63,7 @@ namespace Loja
             produto.Id = Convert.ToInt32(((DataList) source).DataKeys[e.Item.ItemIndex]);
             produto.Titulo = ((LinkButton)e.Item.FindControl("lnkNomeProduto")).Text;
             produto.Preco = Convert.ToDouble(((Label)e.Item.FindControl("lblPreco")).Text);
+            produto.Imagem = ((Image)e.Item.FindControl("imgProduto")).ImageUrl;
 
             var lisProdutos = (List<Produto>)Session["ListaProdutos"];
 
@@ -137,18 +138,23 @@ namespace Loja
 
             var listaProdutos = new List<Produto>
                                     {
-                                        new Produto {Id = 1, Titulo = "Revista um", Preco = 49.99},
-                                        new Produto {Id = 2, Titulo = "Revista dois", Preco = 49.99},
-                                        new Produto {Id = 3, Titulo = "Revista três", Preco = 49.99},
-                                        new Produto {Id = 4, Titulo = "Revista quatro", Preco = 49.99},
-                                        new Produto {Id = 5, Titulo = "Revista cinco", Preco = 49.99},
-                                        new Produto {Id = 6, Titulo = "Revista seis", Preco = 49.99}
+                                        new Produto {Id = 1, Imagem = "imagens/revistas/capa_boaforma.jpg", Titulo = "Revista um", Preco = 49.99},
+                                        new Produto {Id = 2, Imagem = "imagens/revistas/capa_capricho.jpg", Titulo = "Revista dois", Preco = 49.99},
+                                        new Produto {Id = 3, Imagem = "imagens/revistas/capa_claudia.jpg", Titulo = "Revista três", Preco = 49.99},
+                                        new Produto {Id = 4, Imagem = "imagens/revistas/capa_gloss.jpg", Titulo = "Revista quatro", Preco = 49.99},
+                                        new Produto {Id = 5, Imagem = "imagens/revistas/capa_info.jpg", Titulo = "Revista cinco", Preco = 49.99},
+                                        new Produto {Id = 6, Imagem = "imagens/revistas/capa_mundoestranho.jpg", Titulo = "Revista seis", Preco = 49.99}
 
                                     };
 
             dtlProdutos.DataSource = listaProdutos;
             dtlProdutos.DataBind();            
-        }        
+        }
+
+        protected void lnkNomeProduto_Click(object sender, EventArgs e)
+        {
+            mpeViewProduto.Show();
+        }
     }
     
 }

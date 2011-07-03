@@ -12,6 +12,7 @@ using System.Web.UI.HtmlControls;
 using System.Xml.Linq;
 using System.Collections.Generic;
 using br.com.entidades;
+using System.Text.RegularExpressions;
 
 namespace Loja
 {
@@ -23,6 +24,17 @@ namespace Loja
 
             if (listaProdutos != null)
             {
+
+                Regex er = new Regex("<img src");                
+               
+                for (int i = 0; i < listaProdutos.Count; i++)
+                {
+                    if (!er.IsMatch(listaProdutos[i].Imagem))
+                    {
+                        listaProdutos[i].Imagem = "<img src=\"" + listaProdutos[i].Imagem + "\" alt=\"\"";
+                    }
+                }             
+
                 grvProdutos.DataSource = listaProdutos;
                 grvProdutos.DataBind();
 
@@ -35,7 +47,7 @@ namespace Loja
 
                 precoFinal.Text = "R$" + Convert.ToString(valorTotal);
             }
-        }
+        }        
 
         protected void continuarCompra_Click(object sender, EventArgs e)
         {
@@ -62,5 +74,27 @@ namespace Loja
                 Response.Redirect("Pagamento.aspx");
             }
         }
+
+        protected void grvProdutos_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            var idProduto = Convert.ToInt32(grvProdutos.DataKeys[e.RowIndex].Values["Id"]);
+            
+            var listaProdutoSessao = (List<Produto>)Session["ListaProdutos"];
+            
+            Produto pro = listaProdutoSessao.Find(x => x.Id == idProduto);
+            
+            listaProdutoSessao.Remove(pro);
+                        
+            grvProdutos.DataBind();
+
+            double valorTotal = 0;
+
+            for (int i = 0; i < listaProdutoSessao.Count; i++)
+            {
+                valorTotal += listaProdutoSessao[i].Preco;
+            }
+
+            precoFinal.Text = "R$" + Convert.ToString(valorTotal);
+        }              
     }
 }

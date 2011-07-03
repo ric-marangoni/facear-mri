@@ -109,7 +109,7 @@ CREATE TABLE TB_PRODUTO(
 	CATEGORIA int not null,
 	PERIOCIDADE varchar(50),
 	ANO date,
-	IMAGEM blob,
+	IMAGEM varchar(255),
 	IDIOMA varchar(50),
 	EDITORA int not null,
 	primary key(ID_PRODUTO),

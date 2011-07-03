@@ -7,8 +7,7 @@ jQuery(document).ready(
 	    
 	    if(erCheckout.test(window.location) || erLogin.test(window.location) ||  erPag.test(window.location)){
 	        jQuery('#side-bar').hide();
-	        jQuery('#box-principal').css('width', '100%');
-	        jQuery('.lista-carrinho table').attr('rules', '');;
+	        jQuery('#box-principal').css('width', '100%');       
 	    }
 	        	
 		var tamanhoMenu = jQuery('#menu li').length;
