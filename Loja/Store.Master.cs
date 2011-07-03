@@ -93,6 +93,6 @@ namespace Loja
         protected void editarConta_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/Cadastro_cliente.aspx");
-        }
+        }             
     }
 }

@@ -1,18 +1,16 @@
 jQuery(document).ready(
 	function(){		
 	    
-	    var er = new RegExp("Checkout.aspx");
+	    var erCheckout = new RegExp("Checkout.aspx");
+	    var erLogin = new RegExp("Login.aspx");
+	    var erPag = new RegExp("Pagamento.aspx");
 	    
-	    if(er.test(window.location)){
+	    if(erCheckout.test(window.location) || erLogin.test(window.location) ||  erPag.test(window.location)){
 	        jQuery('#side-bar').hide();
 	        jQuery('#box-principal').css('width', '100%');
 	        jQuery('.lista-carrinho table').attr('rules', '');;
 	    }
-	    
-	    var carrinho = document.getElementById('ctl00_cart_info');
-        carrinho.innerHtml = '<small>Você tem <strong>50</strong></small>';
-	   
-	    	
+	        	
 		var tamanhoMenu = jQuery('#menu li').length;
 		jQuery('#menu li a').eq(0).css('border', 'none');			
 

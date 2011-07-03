@@ -48,5 +48,19 @@ namespace Loja
             listaCarrinho.InnerHtml = "<p style=\"text-align: center; padding: 10px;\">Você não tem itens no carrinho</p>";
 
         }
+
+        protected void prosseguirCompra_Click(object sender, EventArgs e)
+        { 
+            var cliente = Session["cliente"];
+
+            if(cliente == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
+            else
+            {
+                Response.Redirect("Pagamento.aspx");
+            }
+        }
     }
 }

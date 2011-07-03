@@ -19,8 +19,8 @@ namespace br.com.dao
                 conexao = new MySqlConnection();
                 comando = new MySqlCommand();
                 conexao.ConnectionString = conexaoBanco;
-                string sql = "INSERT INTO TB_ENDERECO(LOGRADOURO,CIDADE,CEP,ESTADO,NUMERO,COMPLEMENTO)"+
-                "VALUES(@LOGRADOURO,@CIDADE,@CEP,@ESTADO,@NUMERO,@COMPLEMENTO)";
+                string sql = "INSERT INTO TB_ENDERECO(LOGRADOURO,CIDADE,CEP,ESTADO,NUMERO, BAIRRO, COMPLEMENTO)"+
+                "VALUES(@LOGRADOURO,@CIDADE,@CEP,@ESTADO,@NUMERO, @BAIRRO, @COMPLEMENTO)";
                 conexao.Open();
                 comando.CommandText = sql;
                 comando.Connection = conexao;
@@ -29,6 +29,7 @@ namespace br.com.dao
                 comando.Parameters.AddWithValue("@CEP", obj.Cep);
                 comando.Parameters.AddWithValue("@ESTADO", obj.Estado);
                 comando.Parameters.AddWithValue("@NUMERO", obj.Numero);
+                comando.Parameters.AddWithValue("@BAIRRO", obj.Bairro);
                 comando.Parameters.AddWithValue("@COMPLEMENTO", obj.Complemento);
                 comando.ExecuteNonQuery();
             }

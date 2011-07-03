@@ -68,6 +68,20 @@
     <Compile Include="Checkout.aspx.designer.cs">
       <DependentUpon>Checkout.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pagamento.aspx.cs">
+      <DependentUpon>Pagamento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagamento.aspx.designer.cs">
+      <DependentUpon>Pagamento.aspx</DependentUpon>
+    </Compile>
     <Compile Include="utils\Alert.cs" />
     <Compile Include="Cadastro_cliente.aspx.cs">
       <DependentUpon>Cadastro_cliente.aspx</DependentUpon>
@@ -98,6 +112,7 @@
     <Content Include="App_Themes\Estilos\iepngfix.htc" />
     <Content Include="Cadastro_cliente.aspx" />
     <Content Include="Checkout.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="imagens\banner_prestashop.jpg" />
     <Content Include="imagens\banner_virtuemart.jpg" />
     <Content Include="imagens\bg-car.jpg" />
@@ -152,6 +167,7 @@
     <Content Include="js\jquery.cycle.js" />
     <Content Include="js\jQuery.js" />
     <Content Include="js\util.js" />
+    <Content Include="Pagamento.aspx" />
     <Content Include="Store.Master" />
     <Content Include="Default.aspx" />
   </ItemGroup>

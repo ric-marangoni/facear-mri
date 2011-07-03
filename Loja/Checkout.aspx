@@ -19,6 +19,6 @@
     <div class="alinha-direita">
         <asp:ImageButton ID="continuarCompra" runat="server" ImageUrl="~/imagens/bt_continuar_comprando.png" OnClick="continuarCompra_Click"></asp:ImageButton>
         <asp:ImageButton ID="limparCarrinho" runat="server" ImageUrl="~/imagens/bt_limpar_carrinho.png" OnClick="limparCarrinho_Click"></asp:ImageButton>
-        <asp:ImageButton ID="prosseguirCompra" runat="server" ImageUrl="~/imagens/bt_prosseguir.png" PostBackUrl="#"></asp:ImageButton>
+        <asp:ImageButton ID="prosseguirCompra" runat="server" ImageUrl="~/imagens/bt_prosseguir.png" OnClick="prosseguirCompra_Click"></asp:ImageButton>
     </div>
 </asp:Content>
