@@ -24,7 +24,7 @@ CREATE TABLE TB_ENDERECO(
 CREATE TABLE TB_USUARIO(
 	ID_USUARIO int not null auto_increment,
 	NOME varchar(100) not null,
-	DATA_NASCIMENTO date not null,
+	DATA_NASCIMENTO date,
 	LOGIN varchar(50) not null,
 	SENHA varchar(50) not null,
 	ENDERECO int not null,
