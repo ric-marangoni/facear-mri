@@ -42,8 +42,8 @@
                 DataKeyField="Id">
                 <ItemTemplate>
                     <asp:TextBox Text='<%#Eval("Id") %>' Visible="false" ID="ProductID" runat="server"></asp:TextBox>                   
-                    <img src="imagens/revistas/capa_boaforma.jpg" alt="" />
-                    <h2><asp:LinkButton ID="lnkNomeProduto" runat="server" Text='<%#Eval("Titulo") %>'></asp:LinkButton></h2>                    
+                    <asp:Image ID="imgProduto" ImageUrl='<%#Eval("Imagem") %>' runat="server" /> 
+                    <h2><asp:LinkButton ID="lnkNomeProduto" runat="server" OnClick="lnkNomeProduto_Click" Text='<%#Eval("Titulo") %>'></asp:LinkButton></h2>                    
                     <h3>R$<asp:Label ID="lblPreco" Text='<%#Eval("Preco") %>' runat="server"></asp:Label>/mês</h3>
                     <asp:LinkButton ID="btnAdicionar" runat="server" CssClass="carrinho" CommandName="Delete" />
                     <asp:LinkButton ID="btnCancelar" runat="server"  CssClass="removerCarrinho" Visible="false" CommandName="Cancel" />                                        
@@ -56,7 +56,7 @@
                         DynamicServicePath="" Enabled="True">
             </asp:ModalPopupExtender>
             <asp:Panel ID="pnlDados" runat="server" CssClass="modalPopup">
-                <asp:ImageButton ImageUrl="~/imagens/loading.gif" ID="btnSair" runat="server" />
+                <asp:ImageButton ImageUrl="~/imagens/ico_remove.png" ID="btnSair" runat="server" />
             </asp:Panel>
         </ContentTemplate>        
     </asp:UpdatePanel>	    

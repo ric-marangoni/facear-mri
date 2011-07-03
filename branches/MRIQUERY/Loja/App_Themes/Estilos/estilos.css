@@ -6,6 +6,10 @@ body {
 	text-align: center;	
 }
 
+td, th {
+	border: 0;
+}
+
 img {
 	border: 0;
 }
@@ -628,6 +632,13 @@ ul.menu-rodape li a:hover{
 
 .btnVerificar {	
 	padding: 3px;	
+}
+
+.remover-item a {
+	background: url(../../imagens/ico_remove.png) no-repeat center center;
+	display: block;
+	cursor: pointer;
+	text-indent: -5000px	
 }
 
 .medio {

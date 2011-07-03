@@ -11,7 +11,30 @@
         <asp:UpdatePanel ID="updListaCarrinho" runat="server">
             <ContentTemplate>
                 <div ID="listaCarrinho" class="lista-carrinho" runat="server">        
-                    <asp:GridView ID="grvProdutos" BorderWidth="0" CssClass=""  runat="server"></asp:GridView>
+                    <asp:GridView ID="grvProdutos" BorderWidth="0px"  runat="server" 
+                        AutoGenerateColumns="False" onrowdeleting="grvProdutos_RowDeleting" DataKeyNames="Id" rules="">
+                        <Columns>
+                            <asp:BoundField DataField="Imagem" HtmlEncode="False" 
+                                HtmlEncodeFormatString="False" SortExpression="Imagem">
+                                <ItemStyle HorizontalAlign="Center" />
+                            </asp:BoundField>
+                            <asp:BoundField DataField="Titulo" HeaderText="Descrição" 
+                                SortExpression="Titulo" />
+                            <asp:BoundField DataField="Id" HeaderText="Quantidade" SortExpression="Id">
+                                <HeaderStyle HorizontalAlign="Center" />
+                                <ItemStyle HorizontalAlign="Center" />
+                            </asp:BoundField>
+                            <asp:BoundField DataField="Preco" HeaderText="Valor R$" SortExpression="Preco">
+                                <HeaderStyle HorizontalAlign="Center" />
+                                <ItemStyle HorizontalAlign="Center" />
+                            </asp:BoundField>
+                            <asp:CommandField DeleteText="Deletar" HeaderText="Remover item" 
+                                ShowDeleteButton="True" ShowHeader="True">
+                                <HeaderStyle HorizontalAlign="Center" />
+                                <ItemStyle CssClass="remover-item" HorizontalAlign="Center" />
+                            </asp:CommandField>
+                        </Columns>
+                    </asp:GridView>
                     <div class="carrinho-total">TOTAL: <asp:Label ID="precoFinal" runat="server"></asp:Label></div>
                 </div>
             </ContentTemplate>        

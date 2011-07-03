@@ -15,7 +15,7 @@ namespace br.com.entidades
         private Categoria categoria;
         private String tipoPublicacao;
         private DateTime ano;
-        private byte imagem;
+        private String imagem;
         private Editora editora;
         private String idioma;
 
@@ -66,7 +66,7 @@ namespace br.com.entidades
             get { return ano; }
         }
 
-        public byte Imagem 
+        public String Imagem 
         {
             set { this.imagem = value; }
             get { return imagem; }
