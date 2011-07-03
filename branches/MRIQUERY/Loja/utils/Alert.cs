@@ -21,15 +21,21 @@ namespace Loja
         {
   
             string cleanMessage = message.Replace("'", "\'");
-            string script = "<script type=\"text/javascript\">alert('" + cleanMessage + "');</script>";
+            string script = @"<script type='text/javascript'>alert('" + cleanMessage + "');</script>";
 
-  
-            Page page = HttpContext.Current.CurrentHandler as Page;
-
-  
-            if (page != null && !page.ClientScript.IsClientScriptBlockRegistered("alert"))
+            try
             {
-                page.ClientScript.RegisterClientScriptBlock(typeof(Alert), "alert", script);
+                Page page = HttpContext.Current.CurrentHandler as Page;
+
+
+                if (page != null && !page.ClientScript.IsClientScriptBlockRegistered("alert"))
+                {
+                    page.ClientScript.RegisterClientScriptBlock(typeof(Alert), "alert", script);
+                }
+            }
+            catch (Exception ex)
+            { 
+                
             }
         }
     } 

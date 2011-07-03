@@ -22,21 +22,30 @@ namespace Loja
             if (!IsPostBack)
             {
                 CarregarDataList();
-            }
 
-            var lisProdutos = (List<Produto>)Session["ListaProdutos"];
+                var lisProdutos = (List<Produto>)Session["ListaProdutos"];
 
-            if (lisProdutos != null)
-            {
-                var produtos = dtlProdutos;
-
-                for (int i = 0; i < lisProdutos.Count; i++ )
+                if (lisProdutos != null)
                 {
-                    
+                    List<Produto> produtos = new List<Produto>();
+                    var data = dtlProdutos.Items;
+
+                    for (int i = 0; i < data.Count; i++)
+                    {
+                        var id = Convert.ToInt32(((TextBox)data[i].FindControl("ProductID")).Text);
+                        
+                        for (int j = 0; j < lisProdutos.Count; j++)
+                        {
+                            if (id == lisProdutos[j].Id)
+                            {
+                                data[id - 1].FindControl("btnAdicionar").Visible = false;
+                                data[id - 1].FindControl("btnCancelar").Visible = true;
+                            }
+                        }
+                            
+                    }
                 }
             }
-            
-
         }
        
          /// <summary>
@@ -63,12 +72,20 @@ namespace Loja
             lisProdutos.Add(produto);
 
             Session["ListaProdutos"] = lisProdutos;
-                        
-            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "addCar",
-                "var carrinho = document.getElementById('ctl00_cart_info');" +
-                "carrinho.innerHtml = '<small>Você tem <strong>" + lisProdutos.Count + "</strong></small>';"         
-            , true);
+
+            Store Master = this.Master as Store;
+
+            var pluralProduto = " item";
+
+            if (lisProdutos.Count > 1)
+            {
+                pluralProduto = " itens";
+            }
             
+            string carMessage = "<small style=\"font-size:11px\">Você tem " + "<strong style=\"color: #006699;\">" + lisProdutos.Count + "</strong>" + pluralProduto + " na cesta</small>";
+            ((HtmlGenericControl)Master.FindControl("cart_info")).InnerHtml = carMessage;
+            ((LinkButton)Master.FindControl("lnkCheckout")).Visible = true;                    
+                                    
             ((LinkButton)e.Item.FindControl("btnAdicionar")).Visible = false;
             ((LinkButton)e.Item.FindControl("btnCancelar")).Visible = true;
 
@@ -87,7 +104,26 @@ namespace Loja
                     lisProdutos.Remove(lisProdutos[i]);
                 }
             }
-            
+
+            Store Master = this.Master as Store;
+
+            var pluralProduto = " item";
+
+            if (lisProdutos.Count > 1)
+            {
+                pluralProduto = " itens";
+            }
+
+            string carMessage = "<small style=\"font-size:11px\">Você tem " + "<strong style=\"color: #006699;\">" + lisProdutos.Count + "</strong>" + pluralProduto + " na cesta</small>";
+
+            if (lisProdutos.Count == 0)
+            {
+                carMessage = "Você não tem itens em sua cesta.";
+                ((LinkButton)Master.FindControl("lnkCheckout")).Visible = false;
+            }
+
+            ((HtmlGenericControl)Master.FindControl("cart_info")).InnerHtml = carMessage;
+
             ((LinkButton)e.Item.FindControl("btnCancelar")).Visible = false;
             ((LinkButton)e.Item.FindControl("btnAdicionar")).Visible = true;
         }

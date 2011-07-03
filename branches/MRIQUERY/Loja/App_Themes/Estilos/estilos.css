@@ -446,6 +446,46 @@ ul.menu-rodape li a:hover{
     width: 119px;	
 }
 
+.pagamento-login h3 {
+	color: #457AA2;
+    font-size: 20px;
+    margin: 0;
+}
+
+.caixa-have-login {
+	margin: 20px 0 0 50px;
+}
+
+.have-login {
+	float: left;
+	border-right: 1px dotted #CCC;
+	width: 350px;
+	height: 250px;		
+	padding-right: 70px;
+	margin-left: 50px;
+}
+
+.dont-have-login {
+	float: right;
+	height: 250px;	
+	margin-right: 50px;
+	width: 350px;
+}
+
+.dont-have-login a.botao {
+	background-color: #5293C4;
+    border: 1px solid #5293C4;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: tahoma,arial,verdana;
+    font-size: 14px;
+    margin-top: 15px;
+    padding: 1px 4px;
+    text-decoration: none;
+    max-width: 160px; 
+    display: block;	
+}
+
 #box-principal {
 	width: 595px;
 	float: left;

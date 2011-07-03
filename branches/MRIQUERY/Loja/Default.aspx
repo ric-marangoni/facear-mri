@@ -41,6 +41,7 @@
             <asp:DataList ID="dtlProdutos" CssClass="produtos" runat="server" OnCancelCommand="dtlProdutos_CancelCommand" OnDeleteCommand="dtlProdutos_DeleteCommand"
                 DataKeyField="Id">
                 <ItemTemplate>
+                    <asp:TextBox Text='<%#Eval("Id") %>' Visible="false" ID="ProductID" runat="server"></asp:TextBox>                   
                     <img src="imagens/revistas/capa_boaforma.jpg" alt="" />
                     <h2><asp:LinkButton ID="lnkNomeProduto" runat="server" Text='<%#Eval("Titulo") %>'></asp:LinkButton></h2>                    
                     <h3>R$<asp:Label ID="lblPreco" Text='<%#Eval("Preco") %>' runat="server"></asp:Label>/mês</h3>
@@ -48,9 +49,9 @@
                     <asp:LinkButton ID="btnCancelar" runat="server"  CssClass="removerCarrinho" Visible="false" CommandName="Cancel" />                                        
                 </ItemTemplate>
             </asp:DataList>
-            <h1>Jornais</h1>            
-            <asp:HiddenField ID="ProdutoID" runat="server" />
-            <asp:ModalPopupExtender ID="mpeViewProduto" runat="server" TargetControlID="ProdutoID" PopupControlID="pnlDados"
+            <h1>Jornais</h1> 
+            <asp:HiddenField ID="Id" runat="server" Value='<%#Eval("Id") %>' />           
+            <asp:ModalPopupExtender ID="mpeViewProduto" runat="server" TargetControlID="Id" PopupControlID="pnlDados"
                         BackgroundCssClass="modalBackground" DropShadow="true" CancelControlID="btnSair"
                         DynamicServicePath="" Enabled="True">
             </asp:ModalPopupExtender>
