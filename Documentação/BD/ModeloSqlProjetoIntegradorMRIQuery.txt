@@ -79,9 +79,9 @@ CREATE TABLE TB_CATEGORIA(
 
 CREATE TABLE TB_PLANO(
 	ID_PLANO int not null auto_increment,
-	PLANO varchar(100),
+	PLANO varchar(100) not null,
 	DESCRICAO varchar(200),
-	PRECO double,
+	PRECO double not null,
 	VIGENCIA int not null,
 	primary key(ID_PLANO)
 );
