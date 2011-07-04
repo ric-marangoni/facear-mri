@@ -32,13 +32,13 @@ namespace Loja {
         protected global::System.Web.UI.WebControls.DataList dtlProdutos;
         
         /// <summary>
-        /// Id control.
+        /// ProductItemBound control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField Id;
+        protected global::System.Web.UI.WebControls.HiddenField ProductItemBound;
         
         /// <summary>
         /// mpeViewProduto control.
@@ -66,5 +66,23 @@ namespace Loja {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton btnSair;
+        
+        /// <summary>
+        /// lblTitulo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTitulo;
+        
+        /// <summary>
+        /// pnlImg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image pnlImg;
     }
 }

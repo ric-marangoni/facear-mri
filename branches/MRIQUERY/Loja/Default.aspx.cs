@@ -151,9 +151,12 @@ namespace Loja
             dtlProdutos.DataBind();            
         }
 
-        protected void lnkNomeProduto_Click(object sender, EventArgs e)
+        protected void dtlProdutos_ItemCommand(object sender, DataListCommandEventArgs e)
         {
+            lblTitulo.Text = ((LinkButton)e.Item.FindControl("lnkNomeProduto")).Text;
+            pnlImg.ImageUrl = ((Image)e.Item.FindControl("imgProduto")).ImageUrl;
             mpeViewProduto.Show();
+            
         }
     }
     
