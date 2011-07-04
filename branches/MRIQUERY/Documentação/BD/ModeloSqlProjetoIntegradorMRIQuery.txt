@@ -82,7 +82,7 @@ CREATE TABLE TB_PLANO(
 	PLANO varchar(100),
 	DESCRICAO varchar(200),
 	PRECO double,
-	VIGENCIA int not null,
+	VIGENCIA varchar(100) not null,
 	primary key(ID_PLANO)
 );
 
