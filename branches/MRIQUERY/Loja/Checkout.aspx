@@ -20,10 +20,6 @@
                             </asp:BoundField>
                             <asp:BoundField DataField="Titulo" HeaderText="Descrição" 
                                 SortExpression="Titulo" />
-                            <asp:BoundField DataField="Id" HeaderText="Quantidade" SortExpression="Id">
-                                <HeaderStyle HorizontalAlign="Center" />
-                                <ItemStyle HorizontalAlign="Center" />
-                            </asp:BoundField>
                             <asp:BoundField DataField="Preco" HeaderText="Valor R$" SortExpression="Preco">
                                 <HeaderStyle HorizontalAlign="Center" />
                                 <ItemStyle HorizontalAlign="Center" />

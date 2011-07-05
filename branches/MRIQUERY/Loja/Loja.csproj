@@ -112,6 +112,12 @@
     <Content Include="App_Themes\Estilos\iepngfix.htc" />
     <Content Include="Cadastro_cliente.aspx" />
     <Content Include="Checkout.aspx" />
+    <Content Include="imagens\botao-concluir-compra.gif" />
+    <Content Include="imagens\fechamento.amex.gif" />
+    <Content Include="imagens\fechamento.boleto.gif" />
+    <Content Include="imagens\fechamento.dinr.gif" />
+    <Content Include="imagens\fechamento.mast.gif" />
+    <Content Include="imagens\fechamento.visa.gif" />
     <Content Include="Login.aspx" />
     <Content Include="imagens\banner_prestashop.jpg" />
     <Content Include="imagens\banner_virtuemart.jpg" />

@@ -12,7 +12,7 @@ CREATE TABLE TB_PERFIL(
 CREATE TABLE TB_ENDERECO(
 	ID_ENDERECO int not null auto_increment,
 	ESTADO varchar(50),
-	CEP long,
+	CEP varchar(50),
 	CIDADE varchar(50),
 	BAIRRO VARCHAR(100) NOT NULL,
 	LOGRADOURO varchar(50),

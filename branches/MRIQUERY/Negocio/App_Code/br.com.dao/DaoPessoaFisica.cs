@@ -96,7 +96,7 @@ namespace br.com.dao
                 pessoa.Sexo = (String)r["SEXO"];
                 pessoa.DataNascimento = (DateTime)r["DATA_NASCIMENTO"];
                 pessoa.Cpf = (String)r["CPF_CNPJ"];
-                pessoa.Status = (int)r["STATUS"];
+                pessoa.Status = (String)r["STATUS"];
                 pessoa.EmailPessoal = (String)r["EMAIL_PESSOAL"];
                 pessoa.EmailComercial = (String)r["EMAIL_COMERCIAL"];
                 pessoa.TelefoneResidencial = (String)r["TELEFONE_RESIDENCIAL"];
@@ -160,7 +160,7 @@ namespace br.com.dao
             }
 
             return qtd;  
-        }
+        }       
         
     }
 }
