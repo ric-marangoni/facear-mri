@@ -40,6 +40,15 @@ h3 {
 	margin: 8px 0 15px 0;
 }
 
+h5 {
+	background: none repeat scroll 0 0 #D7D7D7;
+    font-size: 11px;
+    font-weight: normal;
+    margin-bottom: 15px;
+    padding: 8px;
+    text-transform: uppercase;	
+}
+
 a {
 	color: #666666;
 }
@@ -389,6 +398,15 @@ ul.menu-rodape li a:hover{
     border-radius: 5px 5px 5px 5px;
 }
 
+.concluir-compra {
+	margin: 52px 0 0 330px;
+	display: none;
+}
+
+.pagDados {
+	display: none;
+}
+
 .lista-carrinho .carrinho-total {
     background: none repeat scroll 0 0 #DDDDDD;
     color: #666666;
@@ -488,6 +506,14 @@ ul.menu-rodape li a:hover{
     text-decoration: none;
     max-width: 160px; 
     display: block;	
+}
+
+.botoesPagamento div {
+	display: block;
+    float: left;
+    margin-left: 15px;
+    text-align: center;
+    width: 105px;	
 }
 
 #box-principal {

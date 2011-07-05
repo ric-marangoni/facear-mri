@@ -65,6 +65,18 @@ jQuery(document).ready(
 		    jQuery("#ctl00_ContentPlaceHolder1_cdrAlternativoCep").mask("99.999-999",{placeholder: "_"});
 
 		    
-		});		
+		});	
+		
+		jQuery(function(){
+		    jQuery('input[name="cartoes"]').click(function(){
+		        if(jQuery(this).prev().attr("alt") == "Boleto"){
+		            jQuery('.concluir-compra').fadeIn();
+		            jQuery('.pagDados').fadeOut();
+		        }else{
+		            jQuery('.pagDados').fadeIn();
+		            jQuery('.concluir-compra').fadeIn();
+		        }		        
+		    });
+		});	
 	}
 );

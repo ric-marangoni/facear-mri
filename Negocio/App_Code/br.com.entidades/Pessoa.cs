@@ -8,7 +8,7 @@ namespace br.com.entidades
     
     public abstract class Pessoa
     {
-        private int status;
+        private String status;
         private DateTime dataCadastro;
         private String senha;
         private String login;
@@ -20,7 +20,7 @@ namespace br.com.entidades
         private String telefoneComercial;
 
          
-        public int Status
+        public String Status
         {
             set { this.status = value; }
             get { return status; }
