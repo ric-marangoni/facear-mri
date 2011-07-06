@@ -27,13 +27,14 @@ namespace Loja
 
                 Regex er = new Regex("<img src");                
                
-                for (int i = 0; i < listaProdutos.Count; i++)
+                /*for (int i = 0; i < listaProdutos.Count; i++)
                 {
                     if (!er.IsMatch(listaProdutos[i].Imagem))
                     {
+                                               
                         listaProdutos[i].Imagem = "<img src=\"" + listaProdutos[i].Imagem + "\" alt=\"\"";
                     }
-                }             
+                }*/             
 
                 grvProdutos.DataSource = listaProdutos;
                 grvProdutos.DataBind();
