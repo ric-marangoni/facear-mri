@@ -18,7 +18,7 @@ namespace br.com.entidades
         private byte[] imagem;
         private Editora editora;
         private String idioma;
-        public String imgUrl;
+        private String imgUrl_;
 
         public int Id 
         {
@@ -71,6 +71,12 @@ namespace br.com.entidades
         {
             set { this.imagem = value; }
             get { return imagem; }
+        }
+
+        public String imgUrl
+        {
+            set { this.imgUrl_ = value; }
+            get { return imgUrl_; }
         }
 
         public Editora Editora 
