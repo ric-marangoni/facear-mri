@@ -11,7 +11,7 @@ public class PessoaJuridica:Pessoa
 {
     private int id;
     private String razaoSocial;
-    private long cnpj;
+    private String cnpj;
 
     public int Id
     {
@@ -25,7 +25,7 @@ public class PessoaJuridica:Pessoa
         get { return razaoSocial; }
     }
 
-    public long Cnpj 
+    public String Cnpj 
     {
         set { this.cnpj = value; }
         get { return cnpj; }

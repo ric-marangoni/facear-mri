@@ -12,6 +12,8 @@ using System.Web.UI.HtmlControls;
 using System.Xml.Linq;
 using br.com.entidades;
 using System.Collections.Generic;
+using br.com.servicos;
+using System.IO;
 
 namespace Loja
 {
@@ -63,7 +65,7 @@ namespace Loja
             produto.Id = Convert.ToInt32(((DataList) source).DataKeys[e.Item.ItemIndex]);
             produto.Titulo = ((LinkButton)e.Item.FindControl("lnkNomeProduto")).Text;
             produto.Preco = Convert.ToDouble(((Label)e.Item.FindControl("lblPreco")).Text);
-            produto.Imagem = ((Image)e.Item.FindControl("imgProduto")).ImageUrl;
+           // produto.Imagem = ((Image)e.Item.FindControl("imgProduto"));
 
             var lisProdutos = (List<Produto>)Session["ListaProdutos"];
 
@@ -136,7 +138,7 @@ namespace Loja
         private void CarregarDataList()
         {
 
-            var listaProdutos = new List<Produto>
+            /*var listaProdutos = new List<Produto>
                                     {
                                         new Produto {Id = 1, Imagem = "imagens/revistas/capa_boaforma.jpg", Titulo = "Revista um", Preco = 49.99},
                                         new Produto {Id = 2, Imagem = "imagens/revistas/capa_capricho.jpg", Titulo = "Revista dois", Preco = 49.99},
@@ -145,8 +147,18 @@ namespace Loja
                                         new Produto {Id = 5, Imagem = "imagens/revistas/capa_info.jpg", Titulo = "Revista cinco", Preco = 49.99},
                                         new Produto {Id = 6, Imagem = "imagens/revistas/capa_mundoestranho.jpg", Titulo = "Revista seis", Preco = 49.99}
 
-                                    };
+                                    };*/
 
+            ServicoProduto srvProduto = new ServicoProduto();
+
+            List<Produto> listaProdutos = srvProduto.listarProduto();
+
+            for (int i = 0; i < listaProdutos.Count; i++)
+            {
+                MemoryStream img = new MemoryStream(listaProdutos[i].Imagem);
+                //Image returnImage = Image.FromStream(img);
+                listaProdutos[i].imgUrl =(String)img.ToString();
+            }
             dtlProdutos.DataSource = listaProdutos;
             dtlProdutos.DataBind();            
         }

@@ -15,9 +15,10 @@ namespace br.com.entidades
         private Categoria categoria;
         private String tipoPublicacao;
         private DateTime ano;
-        private String imagem;
+        private byte[] imagem;
         private Editora editora;
         private String idioma;
+        public String imgUrl;
 
         public int Id 
         {
@@ -66,7 +67,7 @@ namespace br.com.entidades
             get { return ano; }
         }
 
-        public String Imagem 
+        public byte[] Imagem 
         {
             set { this.imagem = value; }
             get { return imagem; }

@@ -1,20 +1,25 @@
 ﻿using System;
 using System.Data;
 using System.Configuration;
-using System.Web;
 using System.Collections;
-
 
 namespace br.com.entidades
 {
-    public class Editora:PessoaJuridica
+    public class Editora
     {
-        private ArrayList produto;
+        private int id_;
+        private PessoaJuridica pessoaJuridica_;
 
-        public ArrayList Produto
+        public int id
         {
-            set { this.produto = value; }
-            get { return produto; }
+            set { id_ = value; }
+            get { return id_; }
+        }
+
+        public PessoaJuridica pessoaJuridica
+        {
+            set {pessoaJuridica_ = value; }
+            get { return pessoaJuridica_; }
         }
     }
 }
