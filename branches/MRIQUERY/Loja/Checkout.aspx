@@ -14,7 +14,7 @@
                     <asp:GridView ID="grvProdutos" BorderWidth="0px"  runat="server" 
                         AutoGenerateColumns="False" onrowdeleting="grvProdutos_RowDeleting" DataKeyNames="Id" rules="">
                         <Columns>
-                            <asp:BoundField DataField="Imagem" HtmlEncode="False" 
+                            <asp:BoundField DataField="imgUrl" HtmlEncode="False" 
                                 HtmlEncodeFormatString="False" SortExpression="Imagem">
                                 <ItemStyle HorizontalAlign="Center" />
                             </asp:BoundField>

@@ -37,19 +37,18 @@
 	<div class="border-shadow"></div>	
 	<asp:UpdatePanel ID="boxConteudo" runat="server" UpdateMode="Always">		
 		<ContentTemplate>
-		    <h1>Revistas</h1>
+		    <h1>Jornais & Revistas</h1>
             <asp:DataList ID="dtlProdutos" CssClass="produtos" runat="server" OnCancelCommand="dtlProdutos_CancelCommand" OnDeleteCommand="dtlProdutos_DeleteCommand"
                 DataKeyField="Id">
                 <ItemTemplate>
                     <asp:TextBox Text='<%#Eval("Id") %>' Visible="false" ID="ProductID" runat="server"></asp:TextBox>                   
-                    <asp:Image ID="imgProduto" ImageUrl='<%#Eval("Imagem") %>' runat="server" /> 
+                    <asp:Image ID="imgProduto" ImageUrl='<%#Eval("imgUrl") %>' runat="server" /> 
                     <h2><asp:LinkButton ID="lnkNomeProduto" runat="server" Text='<%#Eval("Titulo") %>'></asp:LinkButton></h2>                    
                     <h3>R$<asp:Label ID="lblPreco" Text='<%#Eval("Preco") %>' runat="server"></asp:Label>/mês</h3>
                     <asp:LinkButton ID="btnAdicionar" runat="server" CssClass="carrinho" CommandName="Delete" />
                     <asp:LinkButton ID="btnCancelar" runat="server"  CssClass="removerCarrinho" Visible="false" CommandName="Cancel" />                    
                 </ItemTemplate>
             </asp:DataList>            
-            <h1>Jornais</h1>        
         </ContentTemplate>        
     </asp:UpdatePanel>	    
 </asp:Content>

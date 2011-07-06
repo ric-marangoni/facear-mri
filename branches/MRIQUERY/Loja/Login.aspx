@@ -34,7 +34,7 @@
                 <br /> 
                 Não se preocupe os itens do carrinho serão mantidos.
             </p>
-            <asp:LinkButton CssClass="botao" ID="pagamentoCadastro" Text="Cadastre-se agora mesmo" runat="server"></asp:LinkButton>
+            <asp:LinkButton CssClass="botao" ID="pagamentoCadastro" PostBackUrl="~/Cadastro_cliente.aspx" Text="Cadastre-se agora mesmo" runat="server"></asp:LinkButton>
         </div>
     </div>            
 </asp:Content>

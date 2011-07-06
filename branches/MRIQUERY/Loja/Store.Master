@@ -26,8 +26,8 @@
 			<ul id="menu">				
 				<li><a href="#">Fale com a Leia+</a></li>
 				<li><a href="#">Trabalhe na Leia+</a></li>
-				<li><a href="#">Institucional</a></li>
-				<li><a href="#">Pos-Graduação</a></li>
+				<li><a href="#">Fornecedore</a></li>
+				<li><a href="#">Offshore</a></li>
 				<li><a href="#">A Leia+</a></li>
 				<li><a href="Default.aspx">Home</a></li>
 			</ul>
@@ -121,8 +121,8 @@
 				<ul>
 					<li><a href="#">Home</a></li>								
 					<li><a href="#">A Leia+</a></li>
-					<li><a href="#">Pos-Graduação</a></li>
-					<li><a href="#">Institucional</a></li>					
+					<li><a href="#">Offshore</a></li>
+					<li><a href="#">Fornecedores</a></li>					
 					<li><a href="#">Trabalhe na Leia+</a></li>
 					<li><a href="#">Fale com a Leia+</a></li>					
 				</ul>

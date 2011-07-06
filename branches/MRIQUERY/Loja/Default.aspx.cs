@@ -65,7 +65,7 @@ namespace Loja
             produto.Id = Convert.ToInt32(((DataList) source).DataKeys[e.Item.ItemIndex]);
             produto.Titulo = ((LinkButton)e.Item.FindControl("lnkNomeProduto")).Text;
             produto.Preco = Convert.ToDouble(((Label)e.Item.FindControl("lblPreco")).Text);
-           // produto.Imagem = ((Image)e.Item.FindControl("imgProduto"));
+            produto.imgUrl = ((Image)e.Item.FindControl("imgProduto")).ImageUrl;               
 
             var lisProdutos = (List<Produto>)Session["ListaProdutos"];
 
@@ -152,13 +152,22 @@ namespace Loja
             ServicoProduto srvProduto = new ServicoProduto();
 
             List<Produto> listaProdutos = srvProduto.listarProduto();
-
+                        
+            
             for (int i = 0; i < listaProdutos.Count; i++)
             {
-                MemoryStream img = new MemoryStream(listaProdutos[i].Imagem);
-                //Image returnImage = Image.FromStream(img);
-                listaProdutos[i].imgUrl =(String)img.ToString();
+                System.IO.MemoryStream memoryStream = new System.IO.MemoryStream(listaProdutos[i].Imagem);
+                
+                System.Drawing.Image image = System.Drawing.Image.FromStream(memoryStream);
+                string path = "C:\\Documents and Settings\\Ricardo\\Desktop\\MRI\\MRIQUERY\\Loja\\imagens\\temp\\";
+                string imgNome = listaProdutos[i].Titulo+".jpg";
+                
+                image.Save(path + imgNome);                
+                memoryStream.Close();
+
+                listaProdutos[i].imgUrl = "/imagens/temp/"+imgNome;
             }
+
             dtlProdutos.DataSource = listaProdutos;
             dtlProdutos.DataBind();            
         }

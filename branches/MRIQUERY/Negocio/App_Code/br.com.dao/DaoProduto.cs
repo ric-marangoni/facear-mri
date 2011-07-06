@@ -104,7 +104,7 @@ namespace br.com.dao
                     pessoaJuridica.TelefoneResidencial = (String)busca["TELEFONE_RESIDENCIAL"];
                     pessoaJuridica.TelefoneComercial = (String)busca["TELEFONE_COMERCIAL"];
                     pessoaJuridica.TelefoneCelular = (String)busca["TELEFONE_CELULAR"];
-                    pessoaJuridica.DataCadastro = (DateTime)busca["DATA_CADASTRO"];
+                    //pessoaJuridica.DataCadastro = (DateTime)busca["DATA_CADASTRO"];
 
                     editora.id = (int)busca["ID_EDITORA"];
                     editora.pessoaJuridica = pessoaJuridica;
