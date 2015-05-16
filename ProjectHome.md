@@ -1,0 +1,1 @@
+Sistema para cadastros e consultas de assinaturas de  revistas e jornais.
